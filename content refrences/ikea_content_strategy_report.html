@@ -1,0 +1,2131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تقرير استراتيجية محتوى IKEA — الدليل العالمي الشامل</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap');
+
+  :root {
+    --tuba-purple: #2A0C72;
+    --tuba-coral: #F95A60;
+    --tuba-purple-dark: #1A0750;
+    --tuba-purple-mid: #3D1A8F;
+    --tuba-purple-pale: #F0ECFB;
+    --tuba-coral-pale: #FFF0F0;
+    --bg: #F7F5FC;
+    --surface: #FFFFFF;
+    --text: #1A0E35;
+    --muted: #6B5F8A;
+    --border: #E5DFF5;
+    --shadow-sm: 0 2px 16px rgba(42,12,114,.09);
+    --shadow-md: 0 8px 36px rgba(42,12,114,.15);
+    --shadow-lg: 0 20px 60px rgba(42,12,114,.2);
+    --radius: 18px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+    font-size: 16px;
+    direction: rtl;
+    overflow-x: hidden;
+  }
+
+  .cover {
+    min-height: 100vh;
+    background: var(--tuba-purple);
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    padding: 40px 32px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.06;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70'%3E%3Cpath d='M35 22 C35 22 24 12 18 16 C12 20 22 29 35 31 C48 29 58 20 52 16 C46 12 35 22 35 22Z M35 42 C35 42 24 52 18 48 C12 44 22 35 35 33 C48 35 58 44 52 48 C46 52 35 42 35 42Z' fill='white'/%3E%3C/svg%3E");
+    background-size: 70px 70px;
+  }
+
+  .cover::after {
+    content: '';
+    position: absolute;
+    left: -5%; right: -5%; bottom: -2px;
+    height: 110px;
+    background: var(--bg);
+    clip-path: ellipse(58% 100% at 50% 100%);
+    z-index: -1;
+  }
+
+  .cover-content {
+    position: relative;
+    z-index: 1;
+    width: min(1100px, 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .cover-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .cover-logo {
+    height: 44px;
+    filter: brightness(0) invert(1);
+  }
+
+  .cover-badge {
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.2);
+    color: rgba(255,255,255,.86);
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .5px;
+  }
+
+  .cover-body {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .cover-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(249,90,96,.2);
+    border: 1px solid rgba(249,90,96,.42);
+    color: #ffb3b5;
+    padding: 7px 16px;
+    border-radius: 999px;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    margin-bottom: 18px;
+  }
+
+  .cover-eyebrow::before {
+    content: '●';
+    color: var(--tuba-coral);
+    font-size: 8px;
+  }
+
+  .cover h1 {
+    font-size: clamp(30px, 4.8vw, 56px);
+    line-height: 1.2;
+    color: white;
+    font-weight: 900;
+    margin-bottom: 16px;
+  }
+
+  .cover h1 span {
+    color: var(--tuba-coral);
+  }
+
+  .cover .subtitle {
+    font-size: 18px;
+    color: rgba(255,255,255,.74);
+    max-width: 620px;
+    margin-bottom: 22px;
+  }
+
+  .cover-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .cover-pills span {
+    background: rgba(255,255,255,.09);
+    border: 1px solid rgba(255,255,255,.15);
+    color: rgba(255,255,255,.85);
+    padding: 7px 13px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .cover-card {
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: var(--shadow-md);
+    backdrop-filter: blur(8px);
+  }
+
+  .cover-card h3 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .cover-card p {
+    color: rgba(255,255,255,.8);
+    font-size: 14px;
+  }
+
+  .cover-meta {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .cover-meta-item {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 16px;
+    text-align: center;
+    padding: 14px 10px;
+  }
+
+  .cover-meta-item .number {
+    display: block;
+    color: var(--tuba-coral);
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .cover-meta-item .label {
+    display: block;
+    margin-top: 4px;
+    font-size: 11px;
+    color: rgba(255,255,255,.62);
+  }
+
+  .toc {
+    background: var(--surface);
+    padding: 44px 32px 36px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .toc::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cpath d='M40 18 L58 32 L58 56 L48 56 L48 42 L32 42 L32 56 L22 56 L22 32Z' fill='%232A0C72' opacity='0.035'/%3E%3C/svg%3E");
+    background-size: 80px 80px;
+    pointer-events: none;
+  }
+
+  .toc h2 {
+    position: relative;
+    z-index: 1;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--tuba-purple);
+    margin-bottom: 24px;
+  }
+
+  .toc-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+  }
+
+  .toc-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+    box-shadow: var(--shadow-sm);
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+
+  .toc-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--tuba-coral);
+  }
+
+  .toc-num {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--tuba-purple);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  .section {
+    padding: 72px 32px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section:nth-child(even) {
+    background: linear-gradient(180deg, #f9f8fd 0%, var(--bg) 100%);
+  }
+
+  .section-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 34px;
+  }
+
+  .section-num {
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+    background: var(--tuba-purple);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 20px;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .section-title-wrap h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--tuba-purple);
+    margin-bottom: 6px;
+  }
+
+  .section-title-wrap p {
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px 26px;
+    margin-bottom: 18px;
+    box-shadow: var(--shadow-sm);
+    margin-top: 0 !important;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card + .card {
+    margin-top: 24px !important;
+  }
+
+  .grid-2 > div {
+    display: grid;
+    gap: 24px;
+  }
+
+  .grid-2 > div > .card {
+    margin-top: 0 !important;
+  }
+
+  .grid-2,
+  .grid-3 {
+    align-items: stretch;
+    grid-auto-rows: minmax(0, 1fr);
+  }
+
+  .icon,
+  .sector-icon,
+  .heading-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    border-radius: 10px;
+    background: rgba(255,255,255,.16);
+    color: var(--tuba-purple);
+    font-size: 14px;
+    font-weight: 800;
+    margin-inline-end: 10px;
+    flex-shrink: 0;
+  }
+
+  .icon::before,
+  .sector-icon::before,
+  .heading-icon::before {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .icon-vision::before { content: '⌂'; }
+  .icon-balance::before { content: '⚖'; }
+  .icon-leaf::before { content: '☘'; }
+  .icon-home::before { content: '⌂'; }
+  .icon-light::before { content: '✱'; }
+  .icon-family::before { content: '♣'; }
+  .icon-loop::before { content: '⟳'; }
+  .icon-brain::before { content: '⚙'; }
+  .icon-heart::before { content: '♥'; }
+  .icon-target::before { content: '⊙'; }
+  .icon-clock::before { content: '⌚'; }
+  .icon-handshake::before { content: '☯'; }
+  .icon-wave::before { content: '~'; }
+  .icon-key::before { content: '⚑'; }
+  .icon-rocket::before { content: '⚡'; }
+  .icon-chart::before { content: '↗'; }
+  .icon-check::before { content: '✓'; }
+  .icon-cross::before { content: '✕'; }
+  .sector-home::before { content: '⌂'; }
+  .sector-tech::before { content: '⌨'; }
+  .sector-education::before { content: '✎'; }
+  .sector-health::before { content: '✚'; }
+  .sector-commerce::before { content: '⛟'; }
+  .sector-restaurant::before { content: '☕'; }
+
+  .status-yes::before,
+  .tag-success::before {
+    content: '✓';
+    margin-inline-end: 8px;
+  }
+
+  .status-no::before,
+  .tag-danger::before {
+    content: '✕';
+    margin-inline-end: 8px;
+  }
+
+  .status-yes,
+  .status-no,
+  .tag-success,
+  .tag-danger {
+    font-weight: 700;
+  }
+
+  .grid-2,
+  .grid-3 {
+    align-items: stretch;
+    grid-auto-rows: minmax(0, 1fr);
+  }
+
+  .grid-3 > .card {
+    height: 100%;
+  }
+
+  .card-blue {
+    background: var(--tuba-purple);
+    color: white;
+    border-color: rgba(255,255,255,.12);
+  }
+
+  .card-yellow {
+    background: linear-gradient(135deg, #fff5f2 0%, var(--tuba-coral-pale) 100%);
+    border-color: rgba(249,90,96,.16);
+  }
+
+  .card h3 {
+    font-size: 19px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: var(--tuba-purple);
+  }
+
+  .card-blue h3,
+  .card-yellow h3 {
+    color: inherit;
+  }
+
+  .card p,
+  .card li {
+    color: var(--text);
+    line-height: 1.8;
+    font-size: 15px;
+  }
+
+  .card-blue p,
+  .card-blue li {
+    color: rgba(255,255,255,.88);
+  }
+
+  .card ul { padding-right: 20px; }
+  .card ul li { margin-bottom: 6px; }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  @media (max-width: 900px) {
+    .cover-body { grid-template-columns: 1fr; }
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    .cover-meta { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  .quote-box {
+    background: var(--tuba-purple);
+    color: white;
+    border-radius: 22px;
+    padding: 28px 30px;
+    margin: 28px 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+  }
+
+  .quote-box::before {
+    content: '“';
+    position: absolute;
+    top: -12px;
+    right: 16px;
+    font-size: 180px;
+    color: rgba(255,255,255,.08);
+    line-height: 1;
+    font-family: Georgia, serif;
+  }
+
+  .quote-box p { font-size: 20px; font-weight: 700; line-height: 1.6; position: relative; z-index: 1; }
+  .quote-box .source { font-size: 13px; opacity: .75; margin-top: 10px; position: relative; z-index: 1; }
+
+  .table-wrap { overflow-x: auto; margin: 20px 0; border-radius: 14px; border: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  thead { background: var(--tuba-purple); color: white; }
+  th { padding: 14px 16px; text-align: right; font-weight: 700; }
+  td { padding: 12px 16px; border-bottom: 1px solid var(--border); color: var(--text); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: #f8f6fd; }
+
+  .tag {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 4px;
+    color: var(--tuba-purple);
+    background: var(--tuba-purple-pale);
+  }
+
+  .steps { display: flex; flex-direction: column; gap: 0; }
+  .step { display: flex; gap: 18px; padding: 22px 0; border-bottom: 1px solid var(--border); }
+  .step:last-child { border-bottom: none; }
+  .step-num {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--tuba-coral);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+  .step-content h4 { font-size: 18px; font-weight: 700; color: var(--tuba-purple); margin-bottom: 6px; }
+  .step-content p { color: var(--muted); font-size: 15px; }
+
+  .template-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 16px;
+  }
+  .template-card h4 { color: var(--tuba-purple); margin-bottom: 8px; font-size: 17px; }
+  .template-formula { color: var(--tuba-coral); font-weight: 700; margin-bottom: 8px; }
+  .template-example { color: var(--muted); font-size: 14px; }
+  .template-num { display: inline-block; color: var(--tuba-coral); font-weight: 900; margin-bottom: 10px; }
+
+  .stats-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; margin: 24px 0; }
+  .stat-box { background: white; border: 1px solid var(--border); border-radius: 14px; padding: 18px 14px; text-align: center; box-shadow: var(--shadow-sm); }
+  .stat-box .num { font-size: 30px; font-weight: 900; color: var(--tuba-purple); display: block; }
+  .stat-box .lbl { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+  .dna-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 18px; margin-top: 24px; }
+  .dna-block { border-radius: var(--radius); padding: 22px; border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
+  .dna-block.b1 { background: #f2f6ff; }
+  .dna-block.b2 { background: #fff9e8; }
+  .dna-block.b3 { background: #eefbf4; }
+  .dna-block.b4 { background: #fff5f0; }
+  .dna-block.b5 { background: #f6f2ff; }
+  .dna-block.b6 { background: #fff1f3; }
+  .dna-block h4 { font-size: 17px; color: var(--tuba-purple); margin-bottom: 8px; }
+  .dna-block ul { padding-right: 16px; }
+  .dna-block li { font-size: 14px; color: var(--muted); margin-bottom: 5px; }
+
+  .section-sub { font-size: 22px; font-weight: 800; color: var(--tuba-purple); margin: 28px 0 16px; display: inline-block; padding-bottom: 6px; border-bottom: 2px solid var(--tuba-coral); }
+  .highlight { background: var(--tuba-coral); color: white; padding: 2px 8px; border-radius: 6px; font-weight: 700; }
+  .example-pill { display: inline-block; background: var(--tuba-purple-pale); color: var(--tuba-purple); border-radius: 999px; padding: 7px 12px; font-size: 13px; margin: 4px; font-weight: 700; }
+
+  footer {
+    background: var(--tuba-purple-dark);
+    color: rgba(255,255,255,.65);
+    text-align: center;
+    padding: 40px 24px;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="cover-content">
+    <div class="cover-top">
+      <img class="cover-logo" src="https://tuba.com.sa/login_asset/images/logo/ar-color-TubaLogo2.svg" alt="طوبة" />
+      <div class="cover-badge">تقرير استراتيجي · TUBA</div>
+    </div>
+    <div class="cover-body">
+      <div>
+        <div class="cover-eyebrow">IKEA Content Strategy Report</div>
+        <h1>استراتيجية المحتوى <span>لـ IKEA</span></h1>
+        <p class="subtitle">استراتيجية محتوى متكاملة تجمع بين الهوية البصرية، واللغة المؤثرة، والتطبيق العملي على أي قطاع.</p>
+      </div>
+      <div class="cover-card">
+        <h3>الهدف</h3>
+        <p>تقديم إطار عملي لفهم فلسفة محتوى IKEA وتحويلها إلى نظام واضح يمكن تطبيقه بثقة على مختلف العلامات التجارية.</p>
+      </div>
+    </div>
+    <div class="cover-meta">
+      <div class="cover-meta-item"><span class="number">14</span><span class="label">محوراً تحليلياً</span></div>
+      <div class="cover-meta-item"><span class="number">50</span><span class="label">قالباً جاهزاً</span></div>
+      <div class="cover-meta-item"><span class="number">30</span><span class="label">Prompt احترافياً</span></div>
+      <div class="cover-meta-item"><span class="number">8</span><span class="label">قطاعات تطبيقية</span></div>
+    </div>
+  </div>
+</div>
+
+<nav class="toc">
+  <h2>فهرس التقرير</h2>
+  <div class="toc-grid">
+    <a href="#s1" class="toc-item"><span class="toc-num">1</span> الملخص التنفيذي</a>
+    <a href="#s2" class="toc-item"><span class="toc-num">2</span> تحليل فلسفة العلامة</a>
+    <a href="#s3" class="toc-item"><span class="toc-num">3</span> استراتيجية المحتوى</a>
+    <a href="#s4" class="toc-item"><span class="toc-num">4</span> التحليل اللغوي المتعمق</a>
+    <a href="#s5" class="toc-item"><span class="toc-num">5</span> بنية الرسائل والأسئلة</a>
+    <a href="#s6" class="toc-item"><span class="toc-num">6</span> فن السرد والقصة</a>
+    <a href="#s7" class="toc-item"><span class="toc-num">7</span> علم نفس المبيعات</a>
+    <a href="#s8" class="toc-item"><span class="toc-num">8</span> IKEA Content DNA</a>
+    <a href="#s9" class="toc-item"><span class="toc-num">9</span> الإطار الشامل للمحتوى</a>
+    <a href="#s10" class="toc-item"><span class="toc-num">10</span> دليل النبرة والأسلوب</a>
+    <a href="#s11" class="toc-item"><span class="toc-num">11</span> Content Playbook العالمي</a>
+    <a href="#s12" class="toc-item"><span class="toc-num">12</span> مكتبة القوالب — 50 قالباً</a>
+    <a href="#s13" class="toc-item"><span class="toc-num">13</span> مكتبة Prompts — 30 Prompt</a>
+    <a href="#s14" class="toc-item"><span class="toc-num">14</span> توصيات قابلة للتنفيذ</a>
+  </div>
+</nav>
+
+<!-- SECTION 1 -->
+<section class="section" id="s1">
+  <div class="section-header">
+    <div class="section-num">1</div>
+    <div class="section-title-wrap">
+      <h2>الملخص التنفيذي</h2>
+      <p>نظرة شاملة على نظام المحتوى الأكثر تأثيراً في تاريخ تجارة التجزئة العالمية</p>
+    </div>
+  </div>
+  <div class="quote-box">
+    <p>«البيت ليس مجرد مكان — بل هو إحساس بالانتماء وراحة تسكن القلب»</p>
+    <div class="source">كتالوج IKEA الأردن 2026 — رسالة الرئيس التنفيذي</div>
+  </div>
+  <div class="stats-row">
+    <div class="stat-box"><span class="num">50B€</span><span class="lbl">مبيعات IKEA 2024</span></div>
+    <div class="stat-box"><span class="num">160M+</span><span class="lbl">عضو IKEA Family</span></div>
+    <div class="stat-box"><span class="num">422</span><span class="lbl">متجراً في 50+ سوقاً</span></div>
+    <div class="stat-box"><span class="num">340</span><span class="lbl">صفحة كتالوج 2026</span></div>
+    <div class="stat-box"><span class="num">80+</span><span class="lbl">سنة من الاتساق</span></div>
+  </div>
+  <div class="grid-3">
+    <div class="card card-blue">
+      <h3>ماذا تفعل هذه الوثيقة؟</h3>
+      <ul>
+        <li>تُفكّك النظام الفكري لـ IKEA من المصدر مباشرةً</li>
+        <li>تُحوّل الأنماط إلى قواعد قابلة للتطبيق</li>
+        <li>تبني إطاراً عالمياً لأي قطاع أو شركة</li>
+        <li>توفر 50 قالباً + 30 Prompt جاهزاً</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>مصادر التحليل</h3>
+      <ul>
+        <li>كتالوج IKEA الأردن 2026 (340 صفحة)</li>
+        <li>دليل الأثاث الخارجي السعودي 2024</li>
+        <li>تقارير استراتيجية المحتوى — CMSWire 2025</li>
+        <li>نظام الخطوط الرقمية — Flat Pack Tech</li>
+        <li>دراسات التسويق العالمية 2024–2025</li>
+      </ul>
+    </div>
+    <div class="card card-yellow">
+      <h3>الاكتشاف الأهم</h3>
+      <p>IKEA لا تبيع أثاثاً — بل تبيع <strong>إذناً بالحلم</strong>. كل منتج بوابة لحياة أفضل. هذا هو السر الذي جعلها تحتل 80+ عاماً من العقول والقلوب.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 -->
+<section class="section" id="s2" style="background:var(--ikea-light)">
+  <div class="section-header">
+    <div class="section-num">2</div>
+    <div class="section-title-wrap">
+      <h2>تحليل فلسفة العلامة التجارية</h2>
+      <p>النظام الفكري الذي يقف خلف كل كلمة وصورة</p>
+    </div>
+  </div>
+  <div class="grid-2">
+    <div>
+      <div class="card">
+        <h3><span class="heading-icon icon-home"></span>الرؤية المُعلنة منذ 80 عاماً</h3>
+        <p style="font-size:18px;font-weight:700;color:var(--ikea-blue);">"خلق حياة يومية أفضل للناس الكثيرين"</p>
+        <p style="margin-top:12px;">هذه الجملة ليست شعاراً — بل خريطة طريق تحكم كل قرار في المحتوى: التصميم، السعر، اللغة، والصورة.</p>
+      </div>
+      <div class="card card-yellow" style="margin-top:16px;">
+        <h3>الصورة الذهنية المستهدفة</h3>
+        <ul>
+          <li><strong>IKEA = الصديق الذكي</strong> الذي يرى ما لا تراه في مساحتك</li>
+          <li><strong>IKEA = الحليف الاقتصادي</strong> يرفض الغلاء كمعيار للجمال</li>
+          <li><strong>IKEA = المرآة العائلية</strong> تعكس قيمك وأحلامك</li>
+          <li><strong>IKEA = خبير البيت المُتاح</strong> للجميع وليس للنخبة</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="card">
+        <h3>المشاعر التي تستهدفها IKEA بدقة</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>المشاعر</th><th>نسبة الحضور</th><th>الطريقة</th></tr></thead>
+            <tbody>
+              <tr><td>الأمان العائلي</td><td>35%</td><td>صور الأسرة معاً في البيت</td></tr>
+              <tr><td>الراحة والاسترخاء</td><td>28%</td><td>نصوص تصف لحظات الهدوء</td></tr>
+              <tr><td>الفخر الشخصي</td><td>18%</td><td>ربط المنتج بالذوق الخاص</td></tr>
+              <tr><td>التوق للتغيير</td><td>12%</td><td>أسئلة استفزازية إيجابية</td></tr>
+              <tr><td>الفرح العفوي</td><td>7%</td><td>مشاهد الأطفال والمرح</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3 class="section-sub">القيم الستة التي تُرسّخها IKEA</h3>
+  <div class="dna-grid">
+    <div class="dna-block b1"><span class="icon icon-balance"></span><h4>الديمقراطية في التصميم</h4><ul><li>الجمال ليس امتيازاً للأثرياء</li><li>الجودة في متناول الجميع</li><li>التصميم الجيد حق إنساني</li></ul></div>
+    <div class="dna-block b2"><span class="icon icon-leaf"></span><h4>الاستدامة العملية</h4><ul><li>ليس شعاراً — بل سلوك يومي</li><li>تقليل الهدر كقيمة منزلية</li><li>مواد مسؤولة بسعر مقبول</li></ul></div>
+    <div class="dna-block b3"><span class="icon icon-home"></span><h4>البيت كهوية</h4><ul><li>منزلك يعكس شخصيتك</li><li>كل زاوية لها قصة</li><li>الترتيب يصنع السلام الداخلي</li></ul></div>
+    <div class="dna-block b4"><span class="icon icon-light"></span><h4>البساطة كذكاء</h4><ul><li>الحل البسيط هو الأذكى</li><li>البساطة لا تعني الرخص</li><li>الوظيفة والجمال معاً</li></ul></div>
+    <div class="dna-block b5"><span class="icon icon-family"></span><h4>العائلة كمحور</h4><ul><li>كل منتج يُحسّن تجربة عائلية</li><li>الذكريات تُصنع في البيت</li><li>الضيافة لغة حب</li></ul></div>
+    <div class="dna-block b6"><span class="icon icon-loop"></span><h4>التكيّف المستمر</h4><ul><li>حلول تنمو مع احتياجاتك</li><li>قابلية التخصيص معيار لا استثناء</li><li>البيت لا ينتهي من التطور</li></ul></div>
+  </div>
+</section>
+
+<!-- SECTION 3 -->
+<section class="section" id="s3">
+  <div class="section-header">
+    <div class="section-num">3</div>
+    <div class="section-title-wrap">
+      <h2>تحليل استراتيجية المحتوى</h2>
+      <p>كيف تتحول الأفكار إلى نظام محتوى متكامل يعمل 24/7</p>
+    </div>
+  </div>
+  <div class="grid-2">
+    <div>
+      <div class="card card-blue">
+        <h3>القاعدة الذهبية: حلّ المشكلة أولاً</h3>
+        <p style="font-size:17px;font-weight:600;">لا تبدأ بالمنتج — ابدأ بالمشكلة الإنسانية</p>
+        <p style="margin-top:12px;">كل قطعة محتوى تُجيب على سؤال حياتي قبل أن تعرض حلاً تجارياً. المنتج يأتي كـ«إجابة طبيعية» لا كإعلان مدفوع.</p>
+      </div>
+      <div class="card" style="margin-top:16px;">
+        <h3>تسلسل التفكير في أي محتوى</h3>
+        <div class="steps">
+          <div class="step"><div class="step-num">١</div><div class="step-content"><h4>ما اللحظة الإنسانية؟</h4><p>«تحلم بالاسترخاء في حديقتك» — «تريد ضيافة تُبهر»</p></div></div>
+          <div class="step"><div class="step-num">٢</div><div class="step-content"><h4>ما العائق الخفي؟</h4><p>المساحة صغيرة؟ الميزانية محدودة؟ لا تعرف من أين تبدأ؟</p></div></div>
+          <div class="step"><div class="step-num">٣</div><div class="step-content"><h4>قدّم الحل كفكرة لا كمنتج</h4><p>«نباتات مرتفعة طريقة ذكية لتقسيم مساحتك» ← ثم اذكر المنتج</p></div></div>
+          <div class="step"><div class="step-num">٤</div><div class="step-content"><h4>الثمن يأتي أخيراً وبثقة</h4><p>رقم واضح، بلا اعتذار — لأن القيمة تكلّمت</p></div></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="card">
+        <h3>الأعمدة الثلاثة للمحتوى الرقمي</h3>
+        <ul>
+          <li><strong>الإلهام (Inspire):</strong> كيف تحوّل مساحتك؟ أفكار وحلول</li>
+          <li><strong>التجربة (Experience):</strong> رحلة داخل المتجر/التطبيق</li>
+          <li><strong>المجتمع (Community):</strong> قصص المستخدمين ومشاركاتهم</li>
+        </ul>
+      </div>
+      <div class="card card-yellow" style="margin-top:16px;">
+        <h3>التخصيص الذكي 2025</h3>
+        <p>IKEA تنتقل إلى نماذج محتوى هيكلية تُقدّم «المحتوى الصحيح في الوقت الصحيح» — ليس فقط إضافة اسم المستخدم في الإيميل، بل ربط دورة حياة المنتج بسلوك العميل الحقيقي.</p>
+      </div>
+      <div class="card" style="margin-top:16px;">
+        <h3>التكيّف الثقافي المحلي</h3>
+        <p>في كتالوج الأردن 2026: إشارة مباشرة لـ«القهوة العربية» و«التمر» و«الضيافة الأردنية الأصيلة». في السعودية: «الهواء الطلق» و«الجلسة الخارجية». الاستراتيجية ثابتة — التنفيذ يتكيّف.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 -->
+<section class="section" id="s4" style="background:var(--ikea-light)">
+  <div class="section-header">
+    <div class="section-num">4</div>
+    <div class="section-title-wrap">
+      <h2>التحليل اللغوي المتعمق</h2>
+      <p>تشريح الأسلوب: الكلمات والجمل والضمائر بالأدلة من المصادر</p>
+    </div>
+  </div>
+  <div class="grid-2">
+    <div>
+      <div class="card">
+        <h3>نبرة الصوت — Tone of Voice</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>البُعد</th><th>الوصف</th><th>مثال حقيقي</th></tr></thead>
+            <tbody>
+              <tr><td><strong>الدفء</strong></td><td>أبوي بلا تعالٍ</td><td>«من بيتنا لبيتكم»</td></tr>
+              <tr><td><strong>البساطة</strong></td><td>وضوح كالهواء</td><td>«السر في البساطة»</td></tr>
+              <tr><td><strong>التحفيز</strong></td><td>يُشعل الرغبة بلا ضغط</td><td>«ريّح بالك، ودعنا نساعدك»</td></tr>
+              <tr><td><strong>الواقعية</strong></td><td>يعترف بالمشكلة أولاً</td><td>«هل تحتاج مقاعد إضافية؟»</td></tr>
+              <tr><td><strong>الشراكة</strong></td><td>رفيق لا بائع</td><td>«لنتعرف معاً على الحلول»</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card" style="margin-top:16px;">
+        <h3>تحليل الضمائر بالتكرار</h3>
+        <div class="stats-row">
+          <div class="stat-box"><span class="num">45%</span><span class="lbl">«أنت/ك» المخاطَب المباشر</span></div>
+          <div class="stat-box"><span class="num">30%</span><span class="lbl">«نحن» الشراكة</span></div>
+          <div class="stat-box"><span class="num">15%</span><span class="lbl">«معاً» الجمع المُدمج</span></div>
+          <div class="stat-box"><span class="num">10%</span><span class="lbl">الغائب للتوصيف</span></div>
+        </div>
+        <p style="color:var(--ikea-muted);font-size:14px;margin-top:8px;">اللافت: IKEA تتجنب «أنا» المتفاخرة — دائماً في خدمتك لا في الحديث عن نفسها.</p>
+      </div>
+    </div>
+    <div>
+      <div class="card">
+        <h3>الكلمات الأكثر تكراراً</h3>
+        <p style="margin-bottom:12px;font-weight:600;">العائلة الكلامية الإيجابية:</p>
+        <div>
+          <span class="example-pill">راحة</span><span class="example-pill">دفء</span><span class="example-pill">ذكي</span>
+          <span class="example-pill">سهل</span><span class="example-pill">جميل</span><span class="example-pill">مريح</span>
+          <span class="example-pill">عملي</span><span class="example-pill">أناقة</span><span class="example-pill">مثالي</span>
+          <span class="example-pill">الاستدامة</span><span class="example-pill">الجودة</span><span class="example-pill">اللمسة</span>
+        </div>
+      </div>
+      <div class="card" style="margin-top:16px;">
+        <h3>الأفعال السحرية في IKEA</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>الفعل</th><th>السبب النفسي</th></tr></thead>
+            <tbody>
+              <tr><td>تحوّل / تتحوّل</td><td>التغيير إيجابي — ممكن الآن</td></tr>
+              <tr><td>تستطيع / يمكنك</td><td>تمكين المستخدم من القرار</td></tr>
+              <tr><td>نساعدك / نرافقك</td><td>شراكة لا سيطرة</td></tr>
+              <tr><td>اكتشف / استكشف</td><td>فضول بلا إلزام</td></tr>
+              <tr><td>حوّل / اصنع</td><td>وكالة فعل للمستخدم</td></tr>
+              <tr><td>دعنا / لنتعرف</td><td>الدعوة للرحلة المشتركة</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card card-yellow" style="margin-top:16px;">
+        <h3>الصفات المُؤطِّرة — Framing Adjectives</h3>
+        <p>IKEA تستخدم صفات <strong>مركّبة</strong> تجمع الوظيفة والجمال:</p>
+        <p style="margin-top:10px;">«فاخر ولكنه بسيط» · «ذكي وعملي» · «أنيق ومريح» · «سهل ومتين» · «بسيط وجميل»</p>
+        <p style="margin-top:10px;font-style:italic;font-size:13px;">هذه الصفات المزدوجة تُزيل التناقض الذهني بين «الجودة والسعر»</p>
+      </div>
+    </div>
+  </div>
+  <h3 class="section-sub">أمثلة لغوية واقعية من الكتالوجات</h3>
+  <div class="grid-3">
+    <div class="card">
+      <h3>من كتالوج السعودية الخارجي</h3>
+      <p>«<span class="highlight">السر في البساطة</span> — كل ما عليك فعله هو الاسترخاء والاستمتاع بوقت الراحة»</p>
+      <p style="margin-top:8px;font-size:13px;color:var(--ikea-muted);">→ يُلغي الجهد الذهني من قرار الشراء</p>
+    </div>
+    <div class="card">
+      <h3>من كتالوج الأردن 2026</h3>
+      <p>«<span class="highlight">دعنا نرافقك</span> في تصميم منزل أحلامك… منزل يعكس ذوقك، وتفخر بكل زاوية فيه»</p>
+      <p style="margin-top:8px;font-size:13px;color:var(--ikea-muted);">→ يُحوّل المتجر إلى حليف شخصي</p>
+    </div>
+    <div class="card">
+      <h3>من وصف منتج SEGERÖN</h3>
+      <p>«<span class="highlight">فاخر ولكنه بسيط</span>، مع تصميم وجودة تدوم للعديد من أيام الاسترخاء في الهواء الطلق»</p>
+      <p style="margin-top:8px;font-size:13px;color:var(--ikea-muted);">→ يُبرر السعر بالعمر الزمني للقيمة</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 -->
+<section class="section" id="s5">
+  <div class="section-header">
+    <div class="section-num">5</div>
+    <div class="section-title-wrap">
+      <h2>تحليل بنية الرسائل والأسئلة</h2>
+      <p>القوالب المتكررة التي تُحوّل المتصفّح إلى مشترٍ</p>
+    </div>
+  </div>
+  <div class="grid-2">
+    <div>
+      <div class="card card-blue">
+        <h3>Framework 1: Dream → Reality</h3>
+        <p><strong>١. الحلم:</strong> «هل تحلم بالاستمتاع مع عائلتك؟»</p>
+        <p style="margin-top:8px;"><strong>٢. الإجراء البسيط:</strong> «لنتعرف معاً على الحلول»</p>
+        <p style="margin-top:8px;"><strong>٣. الواقع الجديد:</strong> «المزيد من المرح في مساحة منزلك»</p>
+      </div>
+      <div class="card" style="margin-top:16px;">
+        <h3>Framework 2: Problem → Smart Solution</h3>
+        <p><strong>سؤال مشكلة:</strong> «تحتاج مقاعد إضافية؟ او فصل الجلسة؟»</p>
+        <p style="margin-top:8px;"><strong>حل ذكي:</strong> «النباتات المرتفعة طريقة ذكية لتقسيم مساحتك»</p>
+        <p style="margin-top:8px;"><strong>قيمة مضاعفة:</strong> «مثالي للضيوف، وحتى ذلك الوقت كمنصة زهور»</p>
+      </div>
+      <div class="card card-yellow" style="margin-top:16px;">
+        <h3>Framework 3: Quality + Simplicity</h3>
+        <p><strong>الصفة المركّبة:</strong> فاخر + بسيط · جميل + سهل</p>
+        <p style="margin-top:8px;"><strong>الدوام الزمني:</strong> «يدوم للعديد من أيام الاسترخاء»</p>
+        <p style="margin-top:8px;"><strong>السعر الموثوق:</strong> رقم واضح بلا اعتذار</p>
+      </div>
+    </div>
+    <div>
+      <div class="card">
+        <h3>الأسئلة المستخدمة — نظام كامل</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>نوع السؤال</th><th>مثال</th><th>الهدف النفسي</th></tr></thead>
+            <tbody>
+              <tr><td>التحفيز بالحلم</td><td>هل تحلم بالاستمتاع مع عائلتك؟</td><td>تفعيل الرغبة المكبوتة</td></tr>
+              <tr><td>تشخيص المشكلة</td><td>تحتاج مقاعد إضافية؟</td><td>التشخيص الدقيق = الثقة</td></tr>
+              <tr><td>الاستكشاف</td><td>ما الذي ينتظرك في الداخل؟</td><td>استثارة الفضول</td></tr>
+              <tr><td>الخيار البطولي</td><td>تجلس أو تسترخي؟</td><td>وهم التحكم الكامل</td></tr>
+              <tr><td>إعادة التخيّل</td><td>ما الذي يجعل قطعة أثاث تتألق؟</td><td>توليد معيار جديد</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card" style="margin-top:16px;">
+        <h3>بنية الرسالة الإعلانية الثابتة</h3>
+        <div class="steps">
+          <div class="step"><div class="step-num">أ</div><div class="step-content"><h4>عنوان يضرب الحلم أو المشكلة</h4><p>«المزيد من المرح في مساحتك الخارجية»</p></div></div>
+          <div class="step"><div class="step-num">ب</div><div class="step-content"><h4>أسئلة متعددة لشرائح مختلفة</h4><p>«هل تحلم بـ...؟ أو تناول وجبة...؟ أو قضاء وقت بمفردك...؟»</p></div></div>
+          <div class="step"><div class="step-num">ج</div><div class="step-content"><h4>دعوة رحيمة للاستكشاف</h4><p>«لنتعرف معاً على جميع الحلول المتاحة»</p></div></div>
+          <div class="step"><div class="step-num">د</div><div class="step-content"><h4>المنتج + وصف وظيفي + سعر جريء</h4><p>اسم المنتج · الوصف الحياتي · السعر الكبير</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6 -->
+<section class="section" id="s6" style="background:var(--ikea-light)">
+  <div class="section-header">
+    <div class="section-num">6</div>
+    <div class="section-title-wrap">
+      <h2>تحليل فن السرد والقصة</h2>
+      <p>كيف تحكي IKEA قصة كل منتج وكل مساحة</p>
+    </div>
+  </div>
+  <div class="grid-2">
+    <div>
+      <div class="quote-box">
+        <p>«خلف كل باب زجاجي حكاية تُروى؛ قطعك المفضلة، وتذكارات العائلة، ولحظات تستحق أن تتألق»</p>
+        <div class="source">كتالوج IKEA الأردن 2026 — قسم BESTÅ</div>
+      </div>
+      <div class="card">
+        <h3>أساليب السرد المستخدمة</h3>
+        <ul>
+          <li><strong>السرد الحسّي:</strong> «دفء يسكن القلب» — تُحسّ لا تُرى</li>
+          <li><strong>السرد اللحظي:</strong> «قهوة الصباح» «جلسة بعد الظهر»</li>
+          <li><strong>السرد الاجتماعي:</strong> دائماً «آخر» في الصورة — عائلة، ضيف</li>
+          <li><strong>السرد الزمني:</strong> المنتج في سياق مستقبل أفضل</li>
+          <li><strong>السرد الإذني:</strong> «ريّح بالك» — إذن للاسترخاء والثقة</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="card card-blue">
+        <h3>أبطال قصص IKEA</h3>
+        <p>IKEA ليست البطل — أنت البطل. المنتج هو الأداة السحرية التي تُمكّنك.</p>
+        <ul style="margin-top:16px;">
+          <li>البطل = العميل بحلمه وتطلعاته</li>
+          <li>المشكلة = المساحة المحدودة، الميزانية</li>
+          <li>الحكيم = IKEA بخبرتها وأفكارها</li>
+          <li>الأداة السحرية = المنتج بسعر مناسب</li>
+          <li>النهاية السعيدة = حياة يومية أجمل</li>
+        </ul>
+      </div>
+      <div class="card card-yellow" style="margin-top:16px;">
+        <h3>المحتوى البصري كنصف القصة</h3>
+        <ul>
+          <li><strong>صور الناس:</strong> غير نموذجيين، حياة حقيقية</li>
+          <li><strong>الإضاءة:</strong> دافئة حتى في الخارج — أمان</li>
+          <li><strong>التأطير:</strong> المنتج في سياق حياتي كامل</li>
+          <li><strong>الألوان:</strong> طبيعية، هادئة، تُحفّز الحلم</li>
+          <li><strong>الحجم النصي:</strong> ضخم للحلم، صغير للتفاصيل</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7 -->
+<section class="section" id="s7">
+  <div class="section-header">
+    <div class="section-num">7</div>
+    <div class="section-title-wrap">
+      <h2>تحليل علم نفس المبيعات</h2>
+      <p>كيف تُباع الملايين بلا كلمة «اشتري» واحدة</p>
+    </div>
+  </div>
+  <div class="grid-3">
+    <div class="card"><h3><span class="heading-icon icon-brain"></span>١. التلاعب بالإطار الذهني</h3><p>IKEA لا تقول «أرخص منافسيها». بل تُعيد تعريف القيمة: السعر = عدد أيام الاستخدام × الجمال × العائلة. 585 ريال تبدو «رخيصة جداً» قياساً بسنوات الاستخدام.</p></div>
+    <div class="card card-blue"><h3><span class="heading-icon icon-heart"></span>٢. الارتباط العاطفي قبل المنطق</h3><p>الصور والأسئلة العاطفية تأتي أولاً. ثم الوصف الوظيفي. ثم السعر. هذا الترتيب يجعل قرار الشراء مدعوماً بالعاطفة ومُبرَّراً بالمنطق — لا العكس.</p></div>
+    <div class="card"><h3><span class="heading-icon icon-target"></span>٣. الوفرة المُخيِّرة</h3><p>IKEA تعرض 3–5 خيارات بنقاط سعرية مختلفة: 225 / 693 / 2875 ريال. يجعل الوسط يبدو «العاقل» دائماً.</p></div>
+    <div class="card card-yellow"><h3><span class="heading-icon icon-clock"></span>٤. الضمان يُسرّع القرار</h3><p>«365 يوماً لتغيير رأيك» — عكس ما تتوقع! يُزيل الخوف من القرار الخاطئ ويُسرّع الشراء. الضمان هنا أداة تسويقية.</p></div>
+    <div class="card"><h3><span class="heading-icon icon-handshake"></span>٥. نزع أسلحة المقاومة</h3><p>«ليس ضرورياً أن تسدد المبلغ كاملاً بشكل فوري» — IKEA تُجيب على الاعتراض قبل أن تطرحه. يُحوّل «لا أستطيع» إلى «أستطيع الآن».</p></div>
+    <div class="card card-blue"><h3><span class="heading-icon icon-wave"></span>٦. التدفق اللاواعي</h3><p>بنية الكتالوج: كل صفحة تُفضي طبيعياً إلى التالية. كل حل يُولّد حاجة مجاورة. الكتالوج نفسه رحلة مُصمَّمة لتوليد رغبة متنامية.</p></div>
+  </div>
+  <div class="card card-yellow" style="margin-top:32px;">
+    <h3>فلسفة السعر في IKEA — ٣ مبادئ</h3>
+    <div class="grid-3" style="margin-top:16px;">
+      <div><p><strong>لا اعتذار عن السعر</strong><br>الأرقام ضخمة جريئة — اعتزاز لا اعتذار</p></div>
+      <div><p><strong>السعر يأتي بعد القيمة</strong><br>العاطفة أولاً، الثمن أخيراً كنتيجة طبيعية</p></div>
+      <div><p><strong>التخفيض بطولة</strong><br>«سعر أكثر انخفاضاً» تُقال بفخر — دليل على الكفاءة</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 8: IKEA CONTENT DNA -->
+<section class="section" id="s8">
+  <div class="section-header">
+    <div class="section-num">8</div>
+    <div class="section-title-wrap">
+      <h2>IKEA Content DNA</h2>
+      <p>الجينات الستة التي تحكم كل كلمة تكتبها العلامة</p>
+    </div>
+  </div>
+
+  <div class="dna-block b1">
+    <div class="dna-label">DNA #1</div>
+    <h3>مبدأ الإنسان أولاً</h3>
+    <p>ابدأ دائماً بحلم الإنسان أو مشكلته — ليس بالمنتج. العلامة التجارية تأتي لاحقاً كحل، لا كمحور.</p>
+    <div style="margin-top:12px; display:flex; gap:12px; flex-wrap:wrap;">
+      <span class="tag tag-danger">«طاولة NÄMMARÖ بسعر 585 ريال»</span>
+      <span class="tag tag-success" style="background:var(--yellow);color:#003087;">«هل تحلم باللقاء العائلي في هواء الشمس؟ — طاولتك تنتظر»</span>
+    </div>
+  </div>
+
+  <div class="dna-block b2">
+    <div class="dna-label">DNA #2</div>
+    <h3>مبدأ الاقتصاد اللغوي</h3>
+    <p>كل كلمة تكسب مكانها أو تُحذف. العنوان لا يتجاوز 5–7 كلمات. الجملة التفسيرية 10–15 كلمة. لا توضيح للواضح.</p>
+    <div style="margin-top:12px;">
+      <span class="tag">«السر في البساطة» — 3 كلمات تحمل فلسفة كاملة</span>
+      <span class="tag">«راحة واسترخاء» — كلمتان تُعبّران عن وجدان بأكمله</span>
+    </div>
+  </div>
+
+  <div class="dna-block b3">
+    <div class="dna-label">DNA #3</div>
+    <h3>مبدأ الشراكة لا الإقناع</h3>
+    <p>IKEA لا تُقنعك — تصطحبك. «لنتعرف معاً» لا «نحن أفضل». الصوت صوت رفيق يكتشف معك، لا بائع يروّج لك.</p>
+    <div style="margin-top:12px;">
+      <span class="tag">«لنتعرف معاً على جميع الحلول»</span>
+      <span class="tag">«ريّح بالك، ودعنا نساعدك»</span>
+    </div>
+  </div>
+
+  <div class="dna-block b4">
+    <div class="dna-label">DNA #4</div>
+    <h3>مبدأ الخصوصية الحميمة</h3>
+    <p>الخطاب دائماً لشخص واحد — أنت. لا «الزبائن الكرام»، لا «الجميع». الضمير «أنت/ك» يُشعر القارئ أن الرسالة كُتبت حصرياً له.</p>
+    <div style="margin-top:12px;">
+      <span class="tag">«مكان خاص بك»</span>
+      <span class="tag">«ذوقك الخاص»</span>
+      <span class="tag">«جلستك الخاصة»</span>
+      <span class="tag">«يناسبك من خيارات السداد»</span>
+    </div>
+  </div>
+
+  <div class="dna-block b5">
+    <div class="dna-label">DNA #5</div>
+    <h3>مبدأ القيمة المُعلَنة قبل السعر</h3>
+    <p>القيمة العاطفية والوظيفية تُبنى بالكامل قبل أن يظهر رقم السعر. عندما يظهر السعر، يبدو نتيجة طبيعية لما سبق — لا صدمة.</p>
+    <div style="margin-top:12px; display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+      <div class="card" style="padding:12px;"><strong>ترتيب IKEA:</strong><br>١. الحلم → ٢. القيمة → ٣. الوصف الوظيفي → ٤. السعر</div>
+      <div class="card card-blue" style="padding:12px;"><strong>النتيجة:</strong><br>السعر يُقرأ كـ«جائزة على الاختيار» لا كـ«تكلفة»</div>
+    </div>
+  </div>
+
+  <div class="dna-block b6">
+    <div class="dna-label">DNA #6</div>
+    <h3>مبدأ التكيّف المحلي مع ثبات الهوية</h3>
+    <p>الفلسفة والهوية البصرية ثابتتان عالمياً. لكن اللغة والأسئلة والمشاهد تتكيف محلياً. الكتالوج السعودي يتحدث عن «أشعة الشمس الدافئة» وجلسات العائلة في الهواء الطلق.</p>
+    <div style="margin-top:12px;">
+      <span class="tag">«مساحتك الخارجية» ← مفهوم خليجي حياتي</span>
+      <span class="tag">«من تحب» ← صياغة عاطفية عربية</span>
+    </div>
+  </div>
+
+  <div class="card card-yellow" style="margin-top:32px;">
+    <h3>قواعد لا تُخترق — The Iron Rules</h3>
+    <div class="table-wrap" style="margin-top:16px;">
+      <table>
+        <thead><tr><th><span class="status-yes">افعل دائماً</span></th><th><span class="status-no">لا تفعل أبداً</span></th></tr></thead>
+        <tbody>
+          <tr><td>ابدأ بالإنسان وحلمه</td><td>تبدأ بالمنتج أو سعره</td></tr>
+          <tr><td>استخدم «أنت» المفرد المخاطَب</td><td>تخاطب «الجمهور» أو «الزبائن»</td></tr>
+          <tr><td>اجعل الجملة قصيرة وحازمة</td><td>تُطيل شرح ما هو بديهي</td></tr>
+          <tr><td>اعرض القيمة قبل السعر</td><td>تفتح بالسعر أو الخصم</td></tr>
+          <tr><td>استخدم أسئلة تحفيزية</td><td>تصدر أوامر بيعية مباشرة</td></tr>
+          <tr><td>اجمع المتناقضات بثقة: «فاخر ولكنه بسيط»</td><td>تختار بين الجودة والسعر</td></tr>
+          <tr><td>أزل الاعتراض قبل ظهوره</td><td>تتجاهل مخاوف العميل</td></tr>
+          <tr><td>اجعل العميل البطل</td><td>تجعل علامتك التجارية البطل</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 9: UNIVERSAL CONTENT FRAMEWORK -->
+<section class="section" id="s9">
+  <div class="section-header">
+    <div class="section-num">9</div>
+    <div class="section-title-wrap">
+      <h2>الإطار الشامل للمحتوى</h2>
+      <p>النموذج الستي المراحل — من الحلم إلى القرار</p>
+    </div>
+  </div>
+
+  <div class="steps">
+
+    <div class="step">
+      <div class="step-num">١</div>
+      <div class="step-body">
+        <h3>Hook — الخطاف العاطفي</h3>
+        <p><strong>الهدف:</strong> استدعاء حلم كامن أو مشكلة يومية حقيقية</p>
+        <p><strong>الأدوات:</strong> سؤال تحفيزي، صورة حلم، عنوان قصير جريء</p>
+        <p><strong>مثال IKEA:</strong> «هل تحلم بالاستمتاع مع عائلتك تحت أشعة الشمس الدافئة؟»</p>
+        <div class="highlight">القاعدة: الحلم يجب أن يكون حياتياً — ليس منتجياً</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">٢</div>
+      <div class="step-body">
+        <h3>Engage — التوسيع والاستكشاف</h3>
+        <p><strong>الهدف:</strong> تقديم أسئلة متعددة تُمثّل سيناريوهات مختلفة</p>
+        <p><strong>الأدوات:</strong> أسئلة بـ«أو»، عرض خيارات متعددة</p>
+        <p><strong>مثال IKEA:</strong> «تجلس أو تسترخي؟» · «تحتاج مقاعد إضافية؟ أو فصل الجلسة؟ أو إنشاء جلستك الخاصة؟»</p>
+        <div class="highlight">القاعدة: 2–3 أسئلة تُعبّر عن حالات مختلفة يتعرف عليها الجمهور</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">٣</div>
+      <div class="step-body">
+        <h3>Connect — الارتباط العاطفي</h3>
+        <p><strong>الهدف:</strong> ربط المنتج/الخدمة بتجربة إنسانية حميمة</p>
+        <p><strong>الأدوات:</strong> صور أناس حقيقيين، قصص قصيرة، لغة الأسرة والانتماء</p>
+        <p><strong>مثال IKEA:</strong> «تساعدك وحدات الكنب الخارجية على إنشاء مكان لقضاء أجمل الأوقات معاً طوال الصيف»</p>
+        <div class="highlight">القاعدة: «معاً» + «أجمل الأوقات» = ارتباط عاطفي مضاعف</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">٤</div>
+      <div class="step-body">
+        <h3>Solve — الحل كفكرة لا كبيع</h3>
+        <p><strong>الهدف:</strong> تقديم المنتج/الخدمة كالحل الطبيعي للحلم</p>
+        <p><strong>الأدوات:</strong> وصف وظيفي موجز، مواصفات تُبرز الفائدة</p>
+        <p><strong>مثال IKEA:</strong> «فاخر ولكنه بسيط، مع تصميم وجودة تدوم للعديد من أيام الاسترخاء في الهواء الطلق»</p>
+        <div class="highlight">القاعدة: كل مواصفة تتحول إلى فائدة — الطي = سهولة التخزين = راحة بالك</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">٥</div>
+      <div class="step-body">
+        <h3>Motivate — التحفيز وإزالة الحواجز</h3>
+        <p><strong>الهدف:</strong> إزالة الاعتراضات النفسية والمالية</p>
+        <p><strong>الأدوات:</strong> ضمانات، خيارات تمويل، خدمات التركيب والتوصيل</p>
+        <p><strong>مثال IKEA:</strong> «ليس ضرورياً أن تسدد المبلغ كاملاً بشكل فوري، بل يمكنك اختيار ما يناسبك من خيارات السداد المرنة»</p>
+        <div class="highlight">القاعدة: الاعتراض «لا أستطيع الآن» يُحوَّل إلى «أستطيع بالطريقة التي تناسبني»</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">٦</div>
+      <div class="step-body">
+        <h3>Decide — القرار بكل ثقة</h3>
+        <p><strong>الهدف:</strong> جعل القرار يبدو طبيعياً وسهلاً</p>
+        <p><strong>الأدوات:</strong> سعر جريء بارز، CTA بسيط واحد، معلومات التوصيل والتركيب</p>
+        <p><strong>مثال IKEA:</strong> عرض السعر بخط ضخم بعد بناء كل القيمة السابقة — «585 ريال» لا تبدو كثيرة بعد رحلة الحلم</p>
+        <div class="highlight">القاعدة: سؤال CTA واحد فقط — «اضغط على صورة المنتج للحصول على الأفكار»</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="card card-blue" style="margin-top:32px;">
+    <h3><span class="heading-icon icon-loop"></span>تطبيق الإطار على أي قطاع</h3>
+    <div class="table-wrap" style="margin-top:16px;">
+      <table>
+        <thead><tr><th>المرحلة</th><th>عقارات</th><th>تقنية</th><th>تعليم</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Hook</strong></td><td>«هل تحلم بالبيت الذي يُعانق أفقك؟»</td><td>«تعبت من الأعطال والبطء؟»</td><td>«تريد مستقبلاً لأولادك لا سقف له؟»</td></tr>
+          <tr><td><strong>Engage</strong></td><td>«فيلا أم شقة؟ جاهز أم على الخارطة؟»</td><td>«أتريد سرعة؟ أم أماناً؟ أم الاثنين؟»</td><td>«برنامج صباحي أم مسائي؟ حضوري أم عن بُعد؟»</td></tr>
+          <tr><td><strong>Connect</strong></td><td>«مكانٌ تعود إليه كل مساء وقلبك مطمئن»</td><td>«تقنية تعمل بصمت حتى تنجح أنت»</td><td>«معلم يرى فيك ما لم تره بعد في نفسك»</td></tr>
+          <tr><td><strong>Solve</strong></td><td>غرف + مواصفات + موقع</td><td>مواصفات تقنية + سهولة الاستخدام</td><td>المنهج + المدة + الشهادة</td></tr>
+          <tr><td><strong>Motivate</strong></td><td>«تمويل عقاري مرن · ضمان 10 سنوات»</td><td>«نسخة تجريبية 30 يوماً مجاناً»</td><td>«ضمان التوظيف أو استرداد المبلغ»</td></tr>
+          <tr><td><strong>Decide</strong></td><td>السعر + تواصل الآن</td><td>الباقة + اشترك الآن</td><td>الرسوم + سجّل مقعدك</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 10: VOICE & TONE GUIDE -->
+<section class="section" id="s10">
+  <div class="section-header">
+    <div class="section-num">10</div>
+    <div class="section-title-wrap">
+      <h2>دليل النبرة والأسلوب</h2>
+      <p>Voice &amp; Tone Guide — الإطار التنفيذي الكامل</p>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div>
+      <h3 class="section-sub">شخصية الصوت</h3>
+      <div class="voice-grid">
+        <div class="voice-yes">
+          <h4><span class="heading-icon icon-check"></span>الصوت هو...</h4>
+          <ul>
+            <li><strong>ودّي:</strong> يتحدث كصديق يعرفك، لا شركة تبيعك</li>
+            <li><strong>واثق:</strong> يقول ما يعتقده بلا تحفظ</li>
+            <li><strong>ملهِم:</strong> يفتح أفاق الإمكانية لا حدودها</li>
+            <li><strong>عملي:</strong> يعطي حلاً قابلاً للتنفيذ فوراً</li>
+            <li><strong>دافئ:</strong> اللغة تُشعرك بالأمان والانتماء</li>
+            <li><strong>محترم:</strong> يحترم ذكاء القارئ ولا يشرح الواضح</li>
+          </ul>
+        </div>
+        <div class="voice-no">
+          <h4><span class="heading-icon icon-cross"></span>الصوت ليس...</h4>
+          <ul>
+            <li><strong>رسمياً:</strong> لا بيروقراطية ولا خطاب شركاتي</li>
+            <li><strong>متعالياً:</strong> لا تعليم، لا تصحيح، لا نصائح أخلاقية</li>
+            <li><strong>صارخاً:</strong> لا مبالغة في المديح، لا «الأفضل»</li>
+            <li><strong>مُلِحّاً:</strong> لا ضغط بيعي، لا «عرض ينتهي قريباً»</li>
+            <li><strong>تقنياً:</strong> لا مصطلحات جافة، لا أرقام بلا سياق</li>
+            <li><strong>مُعقَّداً:</strong> لا جمل مركّبة، لا تداخل أفكار</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="section-sub">قواعد كتابة العناوين</h3>
+      <div class="card" style="margin-bottom:12px;">
+        <h4>النوع الأول: عنوان الحلم</h4>
+        <p>يصف حالة مثالية يتمناها الجمهور. جملة اسمية إيجابية.</p>
+        <span class="tag">«المزيد من المرح في مساحة منزلك الخارجية»</span>
+        <span class="tag">«راحة واسترخاء»</span>
+      </div>
+      <div class="card card-blue" style="margin-bottom:12px;">
+        <h4>النوع الثاني: عنوان الكشف</h4>
+        <p>يكشف حقيقة مفاجئة أو بسيطة. جملة قصيرة تحمل حكمة.</p>
+        <span class="tag">«السر في البساطة»</span>
+        <span class="tag">«أرضيات أنيقة تكمل الجمال»</span>
+      </div>
+      <div class="card card-yellow">
+        <h4>النوع الثالث: عنوان السؤال</h4>
+        <p>يستدعي إجابة عاطفية فورية من القارئ.</p>
+        <span class="tag">«هل تحلم بالاستمتاع مع عائلتك؟»</span>
+        <span class="tag">«تجلس أو تسترخي؟»</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:32px;">
+    <h3 class="section-sub">قاموس الكلمات المفضلة والممنوعة</h3>
+    <div class="grid-2">
+      <div class="voice-yes">
+        <h4><span class="heading-icon icon-check"></span>الكلمات المفضلة</h4>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;">
+          <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">تحوّل</span>
+          <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">تستطيع</span>
+          <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">نساعدك</span>
+          <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">اكتشف</span>
+          <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">حوّل</span>
+          <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">معاً</span>
+          <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">خاص بك</span>
+          <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">يناسبك</span>
+          <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">دعنا</span>
+          <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">ريّح بالك</span>
+          <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">أجمل</span>
+          <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">بسيط</span>
+          <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">ذكي</span>
+          <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">من تحب</span>
+          <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">يدوم</span>
+          <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">يسهل</span>
+        </div>
+      </div>
+      <div class="voice-no">
+        <h4><span class="heading-icon icon-cross"></span>الكلمات الممنوعة</h4>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;">
+          <span class="tag" style="background:rgba(255,80,80,0.2);color:#fff;">الأفضل في السوق</span>
+          <span class="tag" style="background:rgba(255,80,80,0.2);color:#fff;">رقم واحد</span>
+          <span class="tag" style="background:rgba(255,80,80,0.2);color:#fff;">اشتري الآن!</span>
+          <span class="tag" style="background:rgba(255,80,80,0.2);color:#fff;">فرصة لا تعوّض</span>
+          <span class="tag" style="background:rgba(255,80,80,0.2);color:#fff;">خصم هائل</span>
+          <span class="tag" style="background:rgba(255,80,80,0.2);color:#fff;">المنتج الثوري</span>
+          <span class="tag" style="background:rgba(255,80,80,0.2);color:#fff;">حصرياً لكم</span>
+          <span class="tag" style="background:rgba(255,80,80,0.2);color:#fff;">زبائننا الكرام</span>
+          <span class="tag" style="background:rgba(255,80,80,0.2);color:#fff;">تواصل معنا اليوم</span>
+          <span class="tag" style="background:rgba(255,80,80,0.2);color:#fff;">بمناسبة العرض</span>
+          <span class="tag" style="background:rgba(255,80,80,0.2);color:#fff;">يسعدنا إعلامكم</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card card-yellow" style="margin-top:24px;">
+    <h3>الصفات المركّبة — Compound Adjectives</h3>
+    <p style="margin-bottom:12px;">سر قوة أسلوب IKEA: الجمع بين متناقضين ظاهريين ليوصلا فكرة ثالثة أقوى منهما.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;">
+      <span class="tag" style="background:#003087;color:#FFDA1A;font-weight:700;">فاخر ولكنه بسيط</span>
+      <span class="tag" style="background:#003087;color:#FFDA1A;font-weight:700;">ذكي وعملي</span>
+      <span class="tag" style="background:#003087;color:#FFDA1A;font-weight:700;">سهل ومتين</span>
+      <span class="tag" style="background:#003087;color:#FFDA1A;font-weight:700;">صغير وكافٍ</span>
+      <span class="tag" style="background:#003087;color:#FFDA1A;font-weight:700;">بسيط وجميل</span>
+      <span class="tag" style="background:#003087;color:#FFDA1A;font-weight:700;">اقتصادي وراقٍ</span>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 11: UNIVERSAL CONTENT PLAYBOOK -->
+<section class="section" id="s11">
+  <div class="section-header">
+    <div class="section-num">11</div>
+    <div class="section-title-wrap">
+      <h2>Universal Content Playbook</h2>
+      <p>دليل المحتوى الشامل — تطبيق فلسفة IKEA على 6 قطاعات</p>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>القطاع</th>
+          <th>الحلم الأساسي</th>
+          <th>المشكلة الإنسانية</th>
+          <th>رسالة بأسلوب IKEA</th>
+          <th>الكلمات المفتاحية</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="sector-icon sector-home"></span><strong>العقارات</strong></td>
+          <td>الأمان وامتلاك مكان يُعبّر عن الهوية</td>
+          <td>الخوف من القرار الخاطئ، التعقيد، الغموض</td>
+          <td>«هل تحلم بمكان تعود إليه كل مساء وقلبك مطمئن؟ لنتعرف معاً على خياراتك»</td>
+          <td>بيتك، ملكك، مستقبلك، أمانك</td>
+        </tr>
+        <tr>
+          <td><span class="sector-icon sector-tech"></span><strong>التقنية</strong></td>
+          <td>الإنجاز السهل والتحكم الكامل</td>
+          <td>التعقيد، الوقت الضائع، الأعطال</td>
+          <td>«تقنية تعمل بصمت حتى تنجح أنت — كل ما عليك هو التركيز على ما يهمك»</td>
+          <td>بسيط، سريع، آمن، يعمل دائماً</td>
+        </tr>
+        <tr>
+          <td><span class="sector-icon sector-education"></span><strong>التعليم</strong></td>
+          <td>نسخة أفضل من الذات وفرصة حقيقية</td>
+          <td>الخوف من الفشل، الشك في القدرة</td>
+          <td>«أنت قادر على أكثر مما تظن — نحن هنا لنكشف لك ما تستطيع تحقيقه»</td>
+          <td>قدرتك، مستقبلك، خطوتك، نجاحك</td>
+        </tr>
+        <tr>
+          <td><span class="sector-icon sector-health"></span><strong>الصحة</strong></td>
+          <td>الحياة الكاملة بلا قيود</td>
+          <td>الخوف والألم والشعور بالعجز</td>
+          <td>«جسمك يستحق أن تعيش لحظاتك بالكامل — نساعدك أن تعود لأفضل حالاتك»</td>
+          <td>صحتك، حريتك، قوتك، عافيتك</td>
+        </tr>
+        <tr>
+          <td><span class="sector-icon sector-commerce"></span><strong>التجارة الإلكترونية</strong></td>
+          <td>الرضا الفوري والاختيار الصحيح</td>
+          <td>كثرة الخيارات، عدم الثقة، الشك</td>
+          <td>«لا توقف عن البحث — لديك الخيار الذي يناسبك تماماً، ونوصله إلى بابك»</td>
+          <td>يناسبك، اختيارك، ثقتك، راحتك</td>
+        </tr>
+        <tr>
+          <td><span class="sector-icon sector-restaurant"></span><strong>المطاعم</strong></td>
+          <td>لحظات حقيقية تُجمع الناس</td>
+          <td>المواعيد المشغولة، اللقاءات المتأخرة</td>
+          <td>«حان وقت الاستمتاع بوجبة تجمعكم — لا تفكير، لا إعداد، فقط لحظتكم معاً»</td>
+          <td>معاً، لحظتكم، دفء، طعم حقيقي</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="grid-3" style="margin-top:32px;">
+    <div class="card">
+      <h3><span class="heading-icon icon-key"></span>المبدأ الثابت عبر كل القطاعات</h3>
+      <p>الإنسان وحلمه أولاً — المنتج/الخدمة ثانياً كحل — السعر/الدعوة ثالثاً كنتيجة طبيعية</p>
+    </div>
+    <div class="card card-blue">
+      <h3><span class="heading-icon icon-target"></span>الخطأ الشائع في القطاعات الأخرى</h3>
+      <p>كثير من الشركات تبدأ بـ«نحن نقدم» أو «منتجنا يتميز بـ» — هذا يُفقد العميل اهتمامه في الجملة الأولى</p>
+    </div>
+    <div class="card card-yellow">
+      <h3><span class="heading-icon icon-light"></span>التطبيق الذكي</h3>
+      <p>في كل قطاع، ابحث عن الحلم الإنساني وراء المنتج — ليس عن ميزة المنتج نفسه</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 12: TEMPLATES LIBRARY -->
+<section class="section" id="s12">
+  <div class="section-header">
+    <div class="section-num">12</div>
+    <div class="section-title-wrap">
+      <h2>مكتبة القوالب — 50 قالباً جاهزاً</h2>
+      <p>Templates Library مستوحاة من منهج IKEA — قابلة للتطبيق على أي نشاط تجاري</p>
+    </div>
+  </div>
+
+  <h3 class="section-sub" style="margin-bottom:16px;">المجموعة أ — قوالب العناوين (1–12)</h3>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;margin-bottom:32px;">
+
+    <div class="template-card">
+      <span class="template-num">01</span>
+      <h4>عنوان الحلم المفتوح</h4>
+      <div class="template-formula">«هل تحلم بـ[الحلم]؟»</div>
+      <p class="template-example">هل تحلم ببيت يحكي قصتك؟ · هل تحلم بعمل يُعبّر عنك؟</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">02</span>
+      <h4>عنوان الكشف البسيط</h4>
+      <div class="template-formula">«السر في [الشيء البسيط]»</div>
+      <p class="template-example">السر في التبسيط · السر في القرار الصحيح · السر في الاتساق</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">03</span>
+      <h4>عنوان الخيار الثنائي</h4>
+      <div class="template-formula">«[خيار أ] أو [خيار ب]؟»</div>
+      <p class="template-example">تجلس أو تسترخي؟ · تبني أو تستأجر؟ · تتعلم أو تجرّب؟</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">04</span>
+      <h4>عنوان المزيد</h4>
+      <div class="template-formula">«المزيد من [الشيء المرغوب] في [المكان/الوقت]»</div>
+      <p class="template-example">المزيد من الوقت لما يهمك · المزيد من الإنجاز في يوم واحد</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">05</span>
+      <h4>عنوان الدعوة للاكتشاف</h4>
+      <div class="template-formula">«لنتعرف معاً على [الموضوع]»</div>
+      <p class="template-example">لنتعرف معاً على خياراتك · لنتعرف معاً على ما يمكنك تحقيقه</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">06</span>
+      <h4>عنوان الوقت الحاسم</h4>
+      <div class="template-formula">«حان وقت [الفعل المرغوب]»</div>
+      <p class="template-example">حان وقت الاستمتاع · حان وقت البداية الحقيقية · حان وقتك</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">07</span>
+      <h4>عنوان التملّك الخاص</h4>
+      <div class="template-formula">«[الشيء] يتناسب مع [ذوقك/حياتك/أهدافك]»</div>
+      <p class="template-example">حلول تتناسب مع ذوقك الخاص · خطة تناسب أهدافك الحقيقية</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">08</span>
+      <h4>عنوان الأمر الجريء</h4>
+      <div class="template-formula">«[فعل أمر قصير وقوي]»</div>
+      <p class="template-example">حوّل مساحتك · اكتشف إمكانياتك · ابدأ من هنا</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">09</span>
+      <h4>عنوان الصفة المركّبة</h4>
+      <div class="template-formula">«[صفة١] ولكنه [صفة٢]»</div>
+      <p class="template-example">بسيط ولكنه يدوم · سريع ولكنه عميق · صغير ولكنه كافٍ</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">10</span>
+      <h4>عنوان النتيجة المضمونة</h4>
+      <div class="template-formula">«[الفعل الوحيد المطلوب] + النتيجة»</div>
+      <p class="template-example">كل ما عليك هو الاسترخاء · كل ما عليك هو اختيار موعدك</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">11</span>
+      <h4>عنوان الوجهة</h4>
+      <div class="template-formula">«[صفة] + [مكان/حالة] + [الفائدة]»</div>
+      <p class="template-example">أرضيات أنيقة تكمل الجمال · خدمة سريعة تُريح بالك</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">12</span>
+      <h4>عنوان الشراكة العاطفية</h4>
+      <div class="template-formula">«ريّح بالك، ودعنا [الوعد]»</div>
+      <p class="template-example">ريّح بالك، ودعنا نهتم بالباقي · ارتح، ونحن نُكمل لك ما بدأت</p>
+    </div>
+
+  </div>
+
+  <h3 class="section-sub" style="margin-bottom:16px;">المجموعة ب — قوالب أوصاف المنتجات والخدمات (13–22)</h3>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;margin-bottom:32px;">
+
+    <div class="template-card">
+      <span class="template-num">13</span>
+      <h4>وصف الفائدة المزدوجة</h4>
+      <div class="template-formula">«يعمل هذا [المنتج] لـ[وظيفة أ] وأيضاً لـ[وظيفة ب]»</div>
+      <p class="template-example">يعمل هذا الكرسي للجلوس والاسترخاء وأيضاً لحمامات الشمس</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">14</span>
+      <h4>وصف البساطة الذكية</h4>
+      <div class="template-formula">«طريقة ذكية لـ[تحقيق شيء] بدون [التعقيد المعتاد]»</div>
+      <p class="template-example">طريقة ذكية لتقسيم مساحتك دون تكاليف بناء</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">15</span>
+      <h4>وصف الجودة الدائمة</h4>
+      <div class="template-formula">«تصميم وجودة تدوم لـ[وصف الاستخدام الطويل]»</div>
+      <p class="template-example">جودة تدوم للعديد من أيام الاسترخاء في الهواء الطلق</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">16</span>
+      <h4>وصف الإمكانية المفتوحة</h4>
+      <div class="template-formula">«تُتيح لك [الميزة] إمكانية [الحرية الكاملة التي تريدها]»</div>
+      <p class="template-example">تُتيح لك الوحدات إمكانية صنع كنبة بأي شكل وحجم تريده</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">17</span>
+      <h4>وصف المواد بسياق حياتي</h4>
+      <div class="template-formula">«مصنوع من [المادة] المتين الذي يسهل [الفائدة اليومية]»</div>
+      <p class="template-example">فولاذ مطلي متين يسهل العناية به — لأن وقتك أثمن من التنظيف</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">18</span>
+      <h4>وصف الخدمة المصاحبة</h4>
+      <div class="template-formula">«لا نقصد [الوعد السطحي] بل [الوعد الحقيقي العميق]»</div>
+      <p class="template-example">لا نقصد التوصيل إلى الباب، بل إلى الغرفة التي تختارها</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">19</span>
+      <h4>وصف المرونة</h4>
+      <div class="template-formula">«قابل للـ[التعديل/الطي/التوسيع] لسهولة [الفائدة]»</div>
+      <p class="template-example">قابل للطي لسهولة التخزين — مثالي للمساحات الصغيرة</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">20</span>
+      <h4>وصف المثالية الظرفية</h4>
+      <div class="template-formula">«مثالي عندما تحتاج إلى [الموقف] — وحتى ذلك الوقت يمكن [الاستخدام الآخر]»</div>
+      <p class="template-example">مثالي عندما تحتاج مقاعد للضيوف — وحتى ذلك الوقت يُستخدم كمنصة زهور</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">21</span>
+      <h4>وصف الإلهام الحسي</h4>
+      <div class="template-formula">«[صفة حسية] + [فعل المشاعر] + [سياق الحياة]»</div>
+      <p class="template-example">دفء طبيعي يُعانق المساحة — تصميم يجعل كل يوم أجمل</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">22</span>
+      <h4>وصف القيمة المبرّرة</h4>
+      <div class="template-formula">«[السعر] — لأن [التبرير العاطفي/الوظيفي]»</div>
+      <p class="template-example">استثمار بسيط — لأن أجمل اللحظات تستحق مكاناً أجمل</p>
+    </div>
+
+  </div>
+
+  <h3 class="section-sub" style="margin-bottom:16px;">المجموعة ج — رسائل سوشيال ميديا القصيرة (23–32)</h3>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;margin-bottom:32px;">
+
+    <div class="template-card">
+      <span class="template-num">23</span>
+      <h4>إعلان الشراكة</h4>
+      <div class="template-formula">«ريّح بالك. نحن نهتم بـ[الجانب المُقلق].»</div>
+      <p class="template-example">ريّح بالك. نحن نهتم بالتركيب والتوصيل — أنت اهتم بالاستمتاع.</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">24</span>
+      <h4>رسالة اللحظة</h4>
+      <div class="template-formula">«[الحالة العاطفية] + [الحل] = [النتيجة الجميلة]»</div>
+      <p class="template-example">مساء الراحة + كرسيك المفضل + فنجان قهوتك = اللحظة المثالية</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">25</span>
+      <h4>سؤال التفاعل</h4>
+      <div class="template-formula">«[سؤال يتعلق بتجربتهم] — أخبرنا في التعليقات»</div>
+      <p class="template-example">ما المكان في بيتك الذي يجلب لك أكبر قدر من الراحة؟ أخبرنا</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">26</span>
+      <h4>رسالة الحكمة القصيرة</h4>
+      <div class="template-formula">«[حكمة بسيطة تعكس فلسفة العلامة]»</div>
+      <p class="template-example">البيت الجميل لا يحتاج ميزانية ضخمة — يحتاج أفكاراً ذكية.</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">27</span>
+      <h4>رسالة الوصف الحياتي</h4>
+      <div class="template-formula">«تخيّل [اللحظة المثالية] — [المنتج/الخدمة] يجعلها حقيقية»</div>
+      <p class="template-example">تخيّل صباحك على شرفتك مع رائحة القهوة والهواء المنعش — هذا يستحق.</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">28</span>
+      <h4>رسالة إزالة الخوف</h4>
+      <div class="template-formula">«[الخوف الشائع]؟ لا تقلق — [الحل البسيط]»</div>
+      <p class="template-example">تخشى أن لا يناسبك؟ لا تقلق — 365 يوماً لتغيير رأيك.</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">29</span>
+      <h4>رسالة قبل/بعد</h4>
+      <div class="template-formula">«قبل: [الحالة المؤلمة] — بعد: [الحالة المثالية]»</div>
+      <p class="template-example">قبل: مساحة خارجية مهملة. بعد: مكان تحب العودة إليه كل مساء.</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">30</span>
+      <h4>رسالة الدعوة الخفية</h4>
+      <div class="template-formula">«[العرض] — اختر [ما يناسبك] واحصل على [الفائدة]»</div>
+      <p class="template-example">3 خيارات لكل ميزانية — اختر ما يناسبك واستمتع بالتوصيل المجاني.</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">31</span>
+      <h4>رسالة الأسرة</h4>
+      <div class="template-formula">«لأن [لحظات معاً] لا تُعوَّض — [المنتج/الخدمة] يصنعها أجمل»</div>
+      <p class="template-example">لأن لقاء العائلة على العشاء لا يُعوَّض — المكان الصحيح يجعله أجمل.</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">32</span>
+      <h4>رسالة الفخر الشخصي</h4>
+      <div class="template-formula">«[الشيء] الذي يعكس [هويتك/ذوقك] تماماً»</div>
+      <p class="template-example">مكتب يعكس شخصيتك تماماً — لأنك تستحق بيئة تُلهمك.</p>
+    </div>
+
+  </div>
+
+  <h3 class="section-sub" style="margin-bottom:16px;">المجموعة د — قوالب الحملات التسويقية (33–42)</h3>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;margin-bottom:32px;">
+
+    <div class="template-card">
+      <span class="template-num">33</span>
+      <h4>حملة الموسم</h4>
+      <div class="template-formula">عنوان: «[الفصل/الحدث] هذا العام يبدأ من [مكانك]»<br>نص: ابدأ بتحويل [المكان] إلى [الحلم]</div>
+      <p class="template-example">الصيف هذا العام يبدأ من حديقتك. ابدأ بتحويل مساحتك إلى ملاذك الخاص.</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">34</span>
+      <h4>حملة التحدي</h4>
+      <div class="template-formula">«ماذا لو [السيناريو الطموح]؟ — إليك كيف»</div>
+      <p class="template-example">ماذا لو حوّلت مساحة 20 متراً إلى فضاء يُعبّر عنك تماماً؟ إليك كيف.</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">35</span>
+      <h4>حملة الحلول الثلاثة</h4>
+      <div class="template-formula">«[مشكلة]؟ / [مشكلة]؟ / [مشكلة]؟ — لدينا الحل الذكي لكل موقف»</div>
+      <p class="template-example">مساحة ضيقة؟ ميزانية محدودة؟ وقت قليل؟ — لدينا الحل الذكي لكل موقف.</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">36</span>
+      <h4>حملة الكشف</h4>
+      <div class="template-formula">«اكتشف [الشيء المفاجئ] الذي يُغيّر [نظرتك لـ...]»</div>
+      <p class="template-example">اكتشف كيف يمكن لتفصيل صغير أن يُغيّر نظرتك لمكان عملك تماماً.</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">37</span>
+      <h4>حملة العودة للأساسيات</h4>
+      <div class="template-formula">«عُد إلى ما يهمك — دعنا نهتم بالباقي»</div>
+      <p class="template-example">عُد إلى ما يهمك حقاً — عائلتك، عملك، أحلامك. نحن نهتم بالباقي.</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">38</span>
+      <h4>حملة الإلهام القصصي</h4>
+      <div class="template-formula">«قصة [عميل/موقف حقيقي] — [الدرس أو الإلهام]»</div>
+      <p class="template-example">بدأت بشرفة فارغة. اليوم، هي المكان المفضل لكل أفراد الأسرة.</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">39</span>
+      <h4>حملة الوعد المحدد</h4>
+      <div class="template-formula">«خلال [المدة]، سيبدو [الشيء] مختلفاً تماماً»</div>
+      <p class="template-example">خلال يوم واحد، ستبدو مساحتك مكاناً مختلفاً تماماً — نضمن ذلك.</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">40</span>
+      <h4>حملة الأمان الكامل</h4>
+      <div class="template-formula">«لا مخاطر، لا تعقيد، لا قلق — فقط [الفائدة]»</div>
+      <p class="template-example">لا تعقيد في التركيب، لا قلق من الأعطال، لا مفاجآت في الفاتورة.</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">41</span>
+      <h4>حملة الاحتفال</h4>
+      <div class="template-formula">«احتفل بـ[المناسبة] بطريقة تستحق — [العرض]»</div>
+      <p class="template-example">احتفل بانتقالك الجديد بطريقة تستحق — جهّز مكانك قبل أن تصل.</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">42</span>
+      <h4>حملة الخطوة الأولى</h4>
+      <div class="template-formula">«أصعب خطوة هي الأولى — وها نحن معك فيها»</div>
+      <p class="template-example">أصعب قرار هو البداية — وها نحن هنا معك من الفكرة حتى التسليم.</p>
+    </div>
+
+  </div>
+
+  <h3 class="section-sub" style="margin-bottom:16px;">المجموعة هـ — قوالب متخصصة: عقارات، خدمات، B2B (43–50)</h3>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;">
+
+    <div class="template-card">
+      <span class="template-num">43</span>
+      <h4>وصف عقاري — الحلم</h4>
+      <div class="template-formula">«[الموقع/النوع] صُمِّم لمن يعرف قيمة [القيمة الحياتية]»</div>
+      <p class="template-example">شقة في قلب المدينة صُمِّمت لمن يعرف قيمة كل دقيقة في يومه.</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">44</span>
+      <h4>وصف عقاري — الأمان</h4>
+      <div class="template-formula">«ليس مجرد [الوصف العادي] — بل [الوعد الأعمق]»</div>
+      <p class="template-example">ليس مجرد شقة — بل المكان الذي سيحفظ ذكريات عائلتك لسنوات.</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">45</span>
+      <h4>خدمة تقنية — التبسيط</h4>
+      <div class="template-formula">«[المهمة المعقدة] أصبحت [الوصف السهل] — دعنا نريك كيف»</div>
+      <p class="template-example">إدارة مشاريع 10 عملاء في وقت واحد أصبحت بنقرة واحدة — دعنا نريك كيف.</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">46</span>
+      <h4>خدمة استشارية — الثقة</h4>
+      <div class="template-formula">«لا نبيعك [الخدمة] — نحل معك [المشكلة الحقيقية]»</div>
+      <p class="template-example">لا نبيعك برنامجاً — نحل معك مشكلة ضياع الوقت التي تُكلّفك فعلاً.</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">47</span>
+      <h4>B2B — الشراكة</h4>
+      <div class="template-formula">«شريكك في [المجال] — ليس مجرد مورّد»</div>
+      <p class="template-example">شريكك في النمو — ليس مجرد شركة توريد. نجاحك هو قياس نجاحنا.</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">48</span>
+      <h4>B2B — العائد الاستثماري</h4>
+      <div class="template-formula">«[الاستثمار البسيط] يعني [العائد الكبير] على مدى [المدة]»</div>
+      <p class="template-example">ساعة تدريب أسبوعياً تعني توفير 12 ساعة شهرياً في معالجة الأخطاء.</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">49</span>
+      <h4>الخدمات الاحترافية — الخبرة</h4>
+      <div class="template-formula">«[عدد] سنة من [المجال] تعني أنك لا تبدأ من الصفر — أنت تبدأ من تجربتنا»</div>
+      <p class="template-example">15 عاماً في السوق تعني أنك لا تبدأ من الصفر — بل تبدأ من تجربتنا.</p>
+    </div>
+
+    <div class="template-card">
+      <span class="template-num">50</span>
+      <h4>القالب الشامل — الدورة الكاملة</h4>
+      <div class="template-formula">«[سؤال الحلم] → [الارتباط] → [الحل] → [القيمة] → [الدعوة الناعمة]»</div>
+      <p class="template-example">هل تحلم بـ[X]؟ نحن نعرف هذا الشعور. لهذا طوّرنا [Y] — [Z ريال فقط]. اكتشف كيف.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION 13: PROMPT LIBRARY -->
+<section class="section" id="s13">
+  <div class="section-header">
+    <div class="section-num">13</div>
+    <div class="section-title-wrap">
+      <h2>مكتبة Prompts — 30 Prompt احترافياً</h2>
+      <p>Prompt Library لإنتاج محتوى بمنهج IKEA في أي مجال</p>
+    </div>
+  </div>
+
+  <h3 class="section-sub" style="margin-bottom:16px;">المجموعة أ — Prompts كتابة المحتوى التسويقي (1–10)</h3>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px;margin-bottom:32px;">
+
+    <div class="prompt-card">
+      <span class="prompt-num">P01</span>
+      <h4>Prompt الحملة الكاملة</h4>
+      <p>اكتب حملة تسويقية كاملة لـ[المنتج/الخدمة] في مجال [القطاع] تستهدف [الجمهور]. ابدأ بسؤال عاطفي يستدعي حلماً حقيقياً، ثم قدّم المنتج كحل طبيعي لا كعرض تجاري. استخدم ضمير «أنت» المفرد، وجمل قصيرة لا تتجاوز 12 كلمة. اختم بدعوة ناعمة لا بأمر مباشر. النبرة: ودية، واثقة، بلا مبالغة.</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P02</span>
+      <h4>Prompt العنوان × 5</h4>
+      <p>اكتب 5 عناوين مختلفة لـ[المنتج/الخدمة] تتنوع بين: (1) سؤال الحلم، (2) عنوان الكشف، (3) عنوان المتناقضات، (4) أمر جريء قصير، (5) وعد النتيجة. كل عنوان لا يتجاوز 7 كلمات. بدون تعجب. بدون «أفضل» أو «الأحسن».</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P03</span>
+      <h4>Prompt وصف المنتج الحياتي</h4>
+      <p>اكتب وصفاً لـ[المنتج] بأسلوب يربط المنتج بلحظة حياتية حقيقية قبل أن يذكر أي مواصفة تقنية. الترتيب يجب أن يكون: (1) الحلم أو اللحظة الإنسانية، (2) كيف يُمكّن المنتج هذه اللحظة، (3) مواصفة وظيفية واحدة مع فائدتها. الطول: 40–60 كلمة.</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P04</span>
+      <h4>Prompt سلسلة الأسئلة</h4>
+      <p>اكتب 6 أسئلة تسويقية لـ[الخدمة/المنتج] تُغطي: (2) سؤالين عاطفيين عن الحلم، (2) سؤالين عن مشاكل يومية حقيقية، (2) سؤالين تحفيزيين بـ«أو». كل سؤال بصيغة مباشرة تُخاطب القارئ بـ«أنت». لا أسئلة خبرية أو أسئلة تتطلب تفكيراً مطولاً.</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P05</span>
+      <h4>Prompt محتوى سوشيال ميديا</h4>
+      <p>اكتب 7 منشورات متنوعة لـ[العلامة التجارية] في قطاع [القطاع] تُغطي أسبوعاً كاملاً: الأحد (إلهام)، الاثنين (نصيحة عملية)، الثلاثاء (سؤال تفاعلي)، الأربعاء (قصة قصيرة)، الخميس (عرض الخدمة/المنتج بطريقة ناعمة)، الجمعة (حكمة/اقتباس)، السبت (شهادة/نتيجة). كل منشور 30–50 كلمة.</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P06</span>
+      <h4>Prompt إعادة صياغة المحتوى</h4>
+      <p>أعد كتابة هذا المحتوى التسويقي: [المحتوى] بأسلوب IKEA: احذف كل كلمات المديح الزائدة، حوّل كل مواصفة إلى فائدة إنسانية، استبدل «نحن» بـ«أنت» أو «معاً»، قصّر الجمل إلى نصفها، ابدأ بسؤال أو حالة إنسانية لا بوصف المنتج.</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P07</span>
+      <h4>Prompt رسالة البريد الإلكتروني</h4>
+      <p>اكتب رسالة بريد إلكتروني تسويقية لـ[العرض/الخدمة] موجهة لـ[الجمهور]. عنوان البريد: سؤال قصير أو وعد مثير. الفقرة الأولى: حالة إنسانية يتعرف عليها القارئ. الفقرة الثانية: الحل بإيجاز. الفقرة الثالثة: إزالة اعتراض واحد. الخاتمة: دعوة واحدة فقط بلغة ناعمة. لا تجاوز 150 كلمة.</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P08</span>
+      <h4>Prompt صياغة الشعار الفرعي</h4>
+      <p>اكتب 10 عبارات (Taglines) لـ[العلامة التجارية] في مجال [القطاع]. كل عبارة لا تتجاوز 5 كلمات. تتنوع بين: وعد القيمة، لحظة الارتباط العاطفي، دعوة الاكتشاف، جملة المتناقضات، وعد الشراكة. لا استخدام لكلمات مثل «الأفضل» أو «رقم واحد» أو «الأقوى».</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P09</span>
+      <h4>Prompt محتوى الصفحة الرئيسية</h4>
+      <p>اكتب نصوص صفحة رئيسية لموقع [الشركة] في مجال [القطاع] تشمل: (1) عنوان Hero بسؤال الحلم، (2) 3 بطاقات خدمات بعنوان + جملة واحدة تحمل فائدة إنسانية، (3) قسم «لماذا نحن» دون ذكر كلمة «الأفضل»، (4) CTA بلغة دعوة ناعمة. النبرة: ودية، واثقة، عملية.</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P10</span>
+      <h4>Prompt محتوى الإعلان المدفوع</h4>
+      <p>اكتب 3 نسخ من إعلان مدفوع لـ[المنتج/الخدمة] لـ[المنصة]: نسخة قصيرة (15 كلمة)، نسخة متوسطة (40 كلمة)، نسخة طويلة (80 كلمة). كل نسخة تبدأ بالإنسان وحلمه، تضع السعر/الدعوة في النهاية. لا أسعار في النسخة القصيرة.</p>
+    </div>
+
+  </div>
+
+  <h3 class="section-sub" style="margin-bottom:16px;">المجموعة ب — Prompts استراتيجية المحتوى (11–20)</h3>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px;margin-bottom:32px;">
+
+    <div class="prompt-card">
+      <span class="prompt-num">P11</span>
+      <h4>Prompt تحليل الجمهور</h4>
+      <p>حلّل جمهور [الشركة/المنتج] في مجال [القطاع] واستخرج: (1) الأحلام الثلاثة الرئيسية التي يحملها، (2) الثلاث مخاوف التي تمنعه من الشراء، (3) أكثر 5 أسئلة يبحث عنها، (4) الكلمات العاطفية التي تُحرّكه، (5) الاعتراض الأول الذي سيذكره. قدّم النتائج بصيغة «الحقائق النفسية» للجمهور.</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P12</span>
+      <h4>Prompt رسم خريطة المحتوى</h4>
+      <p>ارسم خريطة محتوى ثلاثية الأبعاد لـ[الشركة] تغطي 30 يوماً: (1) 10 قطع محتوى للوعي (Awareness) تبدأ بالإنسان والحلم، (2) 10 قطع للاهتمام (Consideration) تعرض الحلول، (3) 10 قطع للقرار (Decision) تُزيل الاعتراضات. مع ذكر القناة المناسبة لكل قطعة.</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P13</span>
+      <h4>Prompt التمييز التنافسي</h4>
+      <p>ساعدني في تحديد نبرة صوت مميزة لـ[الشركة] في مجال [القطاع] بأسلوب مستوحى من IKEA. قدّم: (1) الفارق بين نبرتنا ونبرة المنافسين، (2) 5 قواعد نبرة خاصة بنا، (3) 10 كلمات نستخدمها دائماً، (4) 10 كلمات لا نستخدمها أبداً، (5) مثال على وصف خدمتنا الرئيسية بهذه النبرة.</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P14</span>
+      <h4>Prompt قصص النجاح</h4>
+      <p>اكتب قصة نجاح عميل لـ[الشركة] بأسلوب IKEA السردي: (1) حالة العميل قبل (بلغة إنسانية لا تقنية)، (2) لحظة الاكتشاف والحل، (3) التحول في الحياة اليومية (النتيجة الحياتية لا الرقمية فقط). طول القصة: 100–150 كلمة. بلغة أول شخص.</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P15</span>
+      <h4>Prompt تدقيق المحتوى الحالي</h4>
+      <p>اقرأ هذا المحتوى التسويقي: [المحتوى]. ثم دقّق على: (1) هل يبدأ بالإنسان أم بالمنتج؟ (2) كم مرة يُخاطب القارئ مباشرة؟ (3) هل توجد كلمات مبالغة (الأفضل، رقم 1)؟ (4) هل السعر جاء قبل القيمة؟ (5) هل الجمل طويلة أكثر من 15 كلمة؟ قدّم تقييماً من 10 مع توصيات تحسين.</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P16</span>
+      <h4>Prompt تطوير شخصية العلامة</h4>
+      <p>طوّر شخصية علامة تجارية (Brand Persona) لـ[الشركة] في مجال [القطاع] بأسلوب IKEA: (1) اسم الشخصية وخلفيتها الإنسانية، (2) كيف تتحدث في الرسمي، (3) كيف تتحدث في غير الرسمي، (4) ماذا تقول في الأزمات، (5) ماذا لا تقوله أبداً، (6) مثال تحية على كل منصة.</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P17</span>
+      <h4>Prompt المحتوى الموسمي</h4>
+      <p>اكتب استراتيجية محتوى لـ[الموسم/المناسبة] لـ[الشركة] في مجال [القطاع]: (1) ربط المناسبة بالحلم الإنساني لجمهورنا، (2) 5 أفكار محتوى موسمي لا تبيع مباشرة، (3) 3 عروض موسمية بلغة قيمة لا خصم، (4) رسالة ختامية للموسم تُرسّخ الولاء.</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P18</span>
+      <h4>Prompt معالجة الاعتراضات</h4>
+      <p>لدي [المنتج/الخدمة] بسعر [السعر]. الاعتراضات الشائعة: [اذكرها]. اكتب رداً على كل اعتراض بأسلوب IKEA: لا دفاعية، لا تخفيض مباشر، بل إعادة صياغة القيمة لجعل السعر يبدو نتيجة طبيعية لا تكلفة. كل رد لا يتجاوز 30 كلمة.</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P19</span>
+      <h4>Prompt محتوى الاحتفاظ بالعملاء</h4>
+      <p>اكتب 5 رسائل للتواصل مع العملاء الحاليين لـ[الشركة] بأسلوب يُرسّخ الولاء لا يبيع: (1) رسالة شكر لا تذكر أي عرض، (2) محتوى تعليمي يُضيف قيمة، (3) سؤال تفاعلي عن تجربتهم، (4) قصة إلهام من عميل آخر، (5) دعوة لمجتمع المستخدمين.</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P20</span>
+      <h4>Prompt إطار المحتوى الدائم</h4>
+      <p>صمّم لي Content Framework دائماً للشركة يشمل: (1) رسالة العلامة في جملة واحدة، (2) الأعمدة الثلاثة للمحتوى، (3) الصوت والنبرة في 5 كلمات، (4) الموضوعات المسموح بها، (5) الموضوعات الممنوعة، (6) نسبة توزيع المحتوى: تعليمي/إلهامي/بيعي.</p>
+    </div>
+
+  </div>
+
+  <h3 class="section-sub" style="margin-bottom:16px;">المجموعة ج — Prompts متخصصة للعقارات والخدمات (21–30)</h3>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px;">
+
+    <div class="prompt-card">
+      <span class="prompt-num">P21</span>
+      <h4>Prompt وصف المشروع العقاري</h4>
+      <p>اكتب وصفاً تسويقياً لمشروع عقاري: [اسم المشروع، الموقع، النوع، السعر]. الترتيب: (1) سطر الحلم — ماذا تعني هذه الشقة في حياة صاحبها يومياً؟ (2) الموقع كفائدة حياتية لا مجرد إحداثيات، (3) المساحة كإمكانية لا كرقم، (4) السعر بعد بناء القيمة كاملاً. بدون مصطلحات: «فاخر» و«راقٍ» و«حصري» إلا إذا كانت مبرّرة.</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P22</span>
+      <h4>Prompt حملة إطلاق مشروع</h4>
+      <p>اكتب حملة إطلاق لمشروع [العقار] تستهدف [الجمهور]. الحملة تشمل: (1) ثيم الحملة الرئيسي المرتبط بحلم إنساني، (2) عنوان الإطلاق، (3) 3 رسائل للمراحل: الإعلان / قبل الافتتاح / يوم الافتتاح، (4) سؤال تفاعلي لبدء النقاش، (5) CTA يدعو لـ«اكتشاف» لا لـ«الشراء».</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P23</span>
+      <h4>Prompt محتوى الجولة الافتراضية</h4>
+      <p>اكتب نصوص مرافقة لجولة افتراضية في [العقار/المشروع] لكل غرفة أو مساحة. لكل مكان: (1) اسم المساحة بطريقة حياتية لا معمارية، (2) جملة واحدة تصف اللحظة الإنسانية التي تحدث هنا، (3) ميزة وظيفية واحدة بلغة بسيطة. مجموع الوصف لكل مساحة: 20–30 كلمة.</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P24</span>
+      <h4>Prompt رسائل الواتساب التسويقية</h4>
+      <p>اكتب 5 رسائل واتساب لـ[الشركة] في مجال [القطاع] تُرسَل في مراحل مختلفة: (1) أول تواصل، (2) متابعة بعد الزيارة، (3) عرض محدود الوقت بلغة ناعمة، (4) رسالة شهادة عميل، (5) رسالة الإغلاق النهائي. كل رسالة لا تتجاوز 50 كلمة وتبدأ باسم العميل.</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P25</span>
+      <h4>Prompt محتوى المعرض أو الفعالية</h4>
+      <p>اكتب محتوى ترويجي لمشاركة [الشركة] في [الفعالية/المعرض]: (1) إعلان المشاركة بلغة قيمة لا دعاية، (2) 3 منشورات ما قبل الحدث (عد تنازلي بمحتوى مُلهِم)، (3) محتوى يوم الحدث (حي/مباشر)، (4) محتوى ما بعد الحدث (شكر + خلاصة القيمة).</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P26</span>
+      <h4>Prompt الدليل الإرشادي للمشتري</h4>
+      <p>اكتب دليلاً للمشتري لأول مرة في مجال [القطاع] بأسلوب صديق خبير لا بائع: (1) 5 أسئلة يجب أن تطرحها قبل الشراء، (2) 3 أخطاء شائعة وكيف تتجنبها، (3) كيف تحكم على القيمة الحقيقية، (4) ما الذي يجعل الاختيار الصحيح واضحاً. لا ذكر صريح للشركة في 80% من المحتوى.</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P27</span>
+      <h4>Prompt بناء مجتمع المحتوى</h4>
+      <p>صمّم استراتيجية لبناء مجتمع محتوى (Content Community) حول [الشركة/المنتج]: (1) موضوع المجتمع المرتبط بالحلم لا بالمنتج، (2) 5 أنواع محتوى يُشارك فيها الأعضاء، (3) كيف تُحوّل العملاء إلى مُنتجي محتوى، (4) ثيم النقاشات الأسبوعية لـ3 أشهر.</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P28</span>
+      <h4>Prompt اللانش الرقمي</h4>
+      <p>اكتب سكريبت فيديو مدته 60 ثانية لإطلاق [المنتج/الخدمة]: (0–5 ث) سؤال الحلم، (5–20 ث) المشكلة الحقيقية بلغة إنسانية، (20–40 ث) الحل في 3 مزايا كل منها بجملة واحدة، (40–55 ث) إزالة أكبر اعتراض، (55–60 ث) دعوة واحدة ناعمة. بدون أوصاف تقنية في الـ20 ثانية الأولى.</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P29</span>
+      <h4>Prompt محتوى العروض والخصومات</h4>
+      <p>اكتب محتوى لعرض/خصم لـ[المنتج] بأسلوب لا يُشعر القارئ أنه مضطر أو أن المنتج «رخيص»: (1) ربط العرض بمناسبة إنسانية أو موسمية، (2) تقديم العرض كـ«توقيت مناسب» لا كـ«فرصة أخيرة»، (3) التأكيد على القيمة قبل الخصم، (4) لغة الخيار لا الإلحاح.</p>
+    </div>
+
+    <div class="prompt-card">
+      <span class="prompt-num">P30</span>
+      <h4>Prompt الـ Master Prompt الشامل</h4>
+      <p>أنت كاتب محتوى محترف متخصص في أسلوب IKEA العربي. مهمتك: كتابة محتوى لـ[الشركة] في مجال [القطاع] يتبع هذه القواعد الصارمة: (1) ابدأ دائماً بالإنسان والحلم، (2) استخدم «أنت» المفرد، (3) الجمل لا تتجاوز 12 كلمة، (4) المواصفات تتحول دائماً إلى فوائد، (5) السعر في النهاية فقط، (6) لا مبالغة ولا «الأفضل»، (7) كل كلمة تكسب مكانها. المهمة: [اذكر المهمة التسويقية المحددة].</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION 14: ACTIONABLE RECOMMENDATIONS -->
+<section class="section" id="s14">
+  <div class="section-header">
+    <div class="section-num">14</div>
+    <div class="section-title-wrap">
+      <h2>توصيات قابلة للتنفيذ</h2>
+      <p>خطة تطبيق منهج IKEA — من اليوم الأول إلى النتائج الأولى</p>
+    </div>
+  </div>
+
+  <div class="grid-3" style="margin-bottom:32px;">
+    <div class="card card-blue">
+      <h3><span class="heading-icon icon-rocket"></span>الأسبوع الأول</h3>
+      <p><strong>مرحلة التشخيص</strong></p>
+      <ul style="margin-top:12px;">
+        <li>راجع كل محتواك الحالي بـ«مقياس IKEA» الثماني</li>
+        <li>حدّد أكثر 3 أخطاء تكراراً في أسلوبك</li>
+        <li>اكتب النبرة الجديدة في 5 كلمات فقط</li>
+        <li>حدّد الكلمات الممنوعة في مؤسستك</li>
+        <li>أعد كتابة صفحتك الرئيسية بـ Prompt P09</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3><span class="heading-icon icon-chart"></span>الشهر الأول</h3>
+      <p><strong>مرحلة التطبيق</strong></p>
+      <ul style="margin-top:12px;">
+        <li>طبّق الإطار الستي في كل منشور</li>
+        <li>أنشئ بنك أسئلة لكل خدمة (6 أسئلة لكل منتج)</li>
+        <li>دوّن صياغاتك الخاصة للكلمات المفضلة</li>
+        <li>اختبر عنوانين لكل إعلان وقِس الأداء</li>
+        <li>أنشئ مكتبة محتوى جاهزة بـ30 قطعة أساسية</li>
+      </ul>
+    </div>
+    <div class="card card-yellow">
+      <h3>🏆 الربع الأول</h3>
+      <p><strong>مرحلة الترسيخ</strong></p>
+      <ul style="margin-top:12px;">
+        <li>وثّق Brand Voice Guide خاصاً بمؤسستك</li>
+        <li>درّب فريقك على الأسلوب الجديد</li>
+        <li>أنشئ قالب مراجعة محتوى قبل النشر</li>
+        <li>قِس: معدل التفاعل / معدل التحويل / الوقت على الصفحة</li>
+        <li>حدّث الاستراتيجية بناءً على البيانات</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="section-sub" style="margin-bottom:16px;">مقياس النجاح — KPIs</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>المؤشر</th><th>الوضع الحالي الشائع</th><th>الهدف بعد التطبيق</th><th>طريقة القياس</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>معدل تفاعل المحتوى</strong></td>
+          <td>1–2% على السوشيال</td>
+          <td>4–7% في 90 يوماً</td>
+          <td>نسبة التفاعل / الوصول</td>
+        </tr>
+        <tr>
+          <td><strong>معدل فتح البريد الإلكتروني</strong></td>
+          <td>15–20%</td>
+          <td>28–35%</td>
+          <td>عنوان البريد بأسلوب السؤال</td>
+        </tr>
+        <tr>
+          <td><strong>معدل تحويل الصفحة</strong></td>
+          <td>1–2%</td>
+          <td>3–5%</td>
+          <td>A/B بين الأسلوبين</td>
+        </tr>
+        <tr>
+          <td><strong>الوقت على صفحة المنتج</strong></td>
+          <td>45–60 ثانية</td>
+          <td>90–120 ثانية</td>
+          <td>Google Analytics</td>
+        </tr>
+        <tr>
+          <td><strong>معدل إكمال قراءة المحتوى</strong></td>
+          <td>30–40%</td>
+          <td>60–75%</td>
+          <td>Scroll Depth</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="quote-box" style="margin-top:40px;">
+    <p style="font-size:1.3rem;line-height:1.9;font-weight:600;">
+      «الفرق بين المحتوى الذي يُقرأ والمحتوى الذي يُغيّر سلوكاً<br>
+      ليس في الكلمات — بل في المكان الذي تضع فيه الإنسان من قصتك.»
+    </p>
+    <p style="margin-top:16px;font-size:0.95rem;opacity:0.8;">
+      IKEA وضعت العميل في مركز كل قصة منذ 1943 —<br>
+      هذا سر بقائها الأكثر تأثيراً في تاريخ التسويق الاستهلاكي.
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#001f5c;color:#fff;text-align:center;padding:48px 24px 32px;margin-top:0;">
+  <div style="max-width:900px;margin:0 auto;">
+    <div style="font-size:2.2rem;font-weight:900;color:#FFDA1A;letter-spacing:2px;margin-bottom:8px;">IKEA CONTENT STRATEGY</div>
+    <div style="font-size:1rem;opacity:0.75;margin-bottom:32px;">تقرير تحليلي استراتيجي شامل — Arabic RTL Edition</div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin-bottom:32px;">
+      <div style="text-align:center;">
+        <div style="font-size:2rem;font-weight:800;color:#FFDA1A;">14</div>
+        <div style="font-size:0.8rem;opacity:0.7;">قسماً تحليلياً</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-size:2rem;font-weight:800;color:#FFDA1A;">50</div>
+        <div style="font-size:0.8rem;opacity:0.7;">قالباً جاهزاً</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-size:2rem;font-weight:800;color:#FFDA1A;">30</div>
+        <div style="font-size:0.8rem;opacity:0.7;">Prompt احترافياً</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-size:2rem;font-weight:800;color:#FFDA1A;">6</div>
+        <div style="font-size:0.8rem;opacity:0.7;">قطاعات تطبيقية</div>
+      </div>
+    </div>
+    <div style="font-size:0.85rem;opacity:0.5;border-top:1px solid rgba(255,255,255,0.1);padding-top:20px;">
+      تحليل مستند إلى كتالوج IKEA الأردن FY26 · دليل الشراء الخارجي السعودي 2024 · أبحاث CMSWire وFlat Pack Tech<br>
+      جميع القوالب والـ Prompts قابلة للتطبيق على أي قطاع تجاري — بعيداً عن أي ارتباط حصري بمنتجات الأثاث
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
