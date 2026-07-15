@@ -1,14 +1,16 @@
 # AI Knowledge Platform — Tuba
 
-> **This is the architecture document for the entire Tuba knowledge ecosystem.** Read this before any other file in the repository. It explains what exists, how it's organized, how knowledge flows through it, and how to retrieve exactly what you need — whether you're a human teammate or an AI assistant arriving with zero prior context.
+> **This is the architecture document for the entire Tuba knowledge ecosystem.** Read this before any other file in the repository, with one exception: if a creative or narrative judgment call is involved — not just an execution task — read [`NARRATIVE_SYSTEM.md`](NARRATIVE_SYSTEM.md) first. It explains what exists, how it's organized, how knowledge flows through it, and how to retrieve exactly what you need — whether you're a human teammate or an AI assistant arriving with zero prior context.
 
 ---
 
 ## 0. What This Platform Is
 
-Tuba's brand and advertising knowledge has grown from a single logo guideline PDF into a fully layered, AI-native knowledge platform spanning eleven top-level folders and over 100 documents. It exists because a single brand-guide document cannot simultaneously serve a designer who needs a hex code in five seconds and an AI system that needs full campaign reasoning for a novel task — so instead of one document, this platform is a **system of systems**, each layer built to be loaded only when actually needed.
+Tuba's brand and advertising knowledge has grown from a single logo guideline PDF into a fully layered, AI-native knowledge platform spanning thirteen top-level folders and over 130 documents. It exists because a single brand-guide document cannot simultaneously serve a designer who needs a hex code in five seconds and an AI system that needs full campaign reasoning for a novel task — so instead of one document, this platform is a **system of systems**, each layer built to be loaded only when actually needed.
 
-If you read only one section of this document, read §7 (Retrieval Strategy) and then go straight to [knowledge-graph/AI_INDEX.md](knowledge-graph/AI_INDEX.md).
+This platform's validation layer — [`creative-factory/`](creative-factory/) plus [`CREATIVE_FACTORY_REPORT.md`](CREATIVE_FACTORY_REPORT.md) — is where that claim was actually tested: 8 full production-ready campaigns, built by reading only what each task required, scored honestly against the evaluation scorecards below (one landed in REVISE, on purpose, not smoothed over). Read the report before assuming any part of this platform works in practice rather than in theory.
+
+If you read only one section of this document, read §7 (Retrieval Strategy) and then go straight to [knowledge-graph/AI_INDEX.md](knowledge-graph/AI_INDEX.md). If the task is creative rather than executional, go to [`NARRATIVE_SYSTEM.md`](NARRATIVE_SYSTEM.md) instead — it sits one level above this document, the way a film's story bible sits above its shot-by-shot production guide.
 
 ---
 
@@ -41,27 +43,36 @@ flowchart TD
     BI --> Meta
     BM --> Meta
     KB --> Meta
+    AS --> CF[creative-factory/<br/>validation]
+    NS[narrative-system/] -.sits above.-> KB
+    NS -.sits above.-> AS
 ```
 
-Four conceptual layers, eleven folders:
+Six conceptual layers, thirteen folders:
 
 | Layer | Folders | Answers |
 |---|---|---|
+| **Narrative** | `narrative-system/` | How Tuba thinks, feels, sees, and tells stories — sits above everything else |
 | **Foundation** | `knowledge-base/` | Why Tuba is what it is |
 | **Execution** | `advertising-system/` | How to produce on-brand advertising, day to day |
 | **Depth** | `brand-intelligence/`, `brand-memory/` | What Tuba deeply knows (static) and has actually learned (living) |
 | **Meta** | `knowledge-graph/`, `context-packs/`, `routing/`, `metadata/`, `evaluation/`, `brand-evolution/` | How to find, compress, route, tag, score, and evolve everything above |
+| **Validation** | `creative-factory/` | Proof the rest of this platform actually produces real creative work — not a documentation layer, a production one |
 
-Plus three root documents: this file, [ADVERTISING_IDENTITY_GUIDE.md](ADVERTISING_IDENTITY_GUIDE.md) (the original master rulebook, now nested inside this architecture), and [CLAUDE_SYSTEM_PROMPT.md](CLAUDE_SYSTEM_PROMPT.md) (the compressed behavioral contract).
+Plus five root documents: this file, [NARRATIVE_SYSTEM.md](NARRATIVE_SYSTEM.md) (the highest-level creative document, discovered via [BIG_IDEA_PLATFORM.md](BIG_IDEA_PLATFORM.md)), [ADVERTISING_IDENTITY_GUIDE.md](ADVERTISING_IDENTITY_GUIDE.md) (the master rulebook), [CLAUDE_SYSTEM_PROMPT.md](CLAUDE_SYSTEM_PROMPT.md) (the compressed behavioral contract), and [CREATIVE_FACTORY_REPORT.md](CREATIVE_FACTORY_REPORT.md) (the validation report — 8 campaigns, scored honestly, system weaknesses named plainly).
 
 ## 2. Folder Hierarchy (complete)
 
 ```
 /
+├── NARRATIVE_SYSTEM.md             ← the highest-level creative document — start here for anything creative
+├── BIG_IDEA_PLATFORM.md            ← the approved big idea this document expands
 ├── AI_KNOWLEDGE_PLATFORM.md        ← you are here
 ├── ADVERTISING_IDENTITY_GUIDE.md   ← master rulebook / original index
 ├── CLAUDE_SYSTEM_PROMPT.md         ← compressed AI behavioral contract
+├── CREATIVE_FACTORY_REPORT.md      ← the validation report — 8 real campaigns, scored honestly
 │
+├── narrative-system/                Narrative: manifesto, world-building, pillars, archetypes, story library, and 15 more
 ├── knowledge-base/                 Foundation: project, brand, competitor analysis
 ├── advertising-system/             Execution: strategy (DNA→campaigns) + operating (checklists→AI prompts)
 ├── brand-intelligence/             Depth (static): psychology, personas, language, creative libraries
@@ -75,7 +86,12 @@ Plus three root documents: this file, [ADVERTISING_IDENTITY_GUIDE.md](ADVERTISIN
 ├── brand-evolution/                Meta: changelog, decisions, timeline, versioning, roadmap
 │
 ├── research/                       Raw competitive intelligence
-└── references/                     Pointer index to original source assets
+├── references/                     Pointer index to original source assets
+│
+├── creative-factory/                Validation: 8 real campaigns, production specs, honest scorecards — see CREATIVE_FACTORY_REPORT.md
+│
+└── brand-experience/                An executive presentation (Vite + React) — a visual surface of this
+                                     platform for the Board, not a documentation layer. See its own README.
 ```
 
 ## 3. Knowledge Flow

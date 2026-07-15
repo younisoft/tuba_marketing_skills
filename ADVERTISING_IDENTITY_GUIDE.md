@@ -2,7 +2,7 @@
 
 > **The master rulebook.** If you create advertising for Tuba — as a designer, copywriter, marketer, campaign manager, motion designer, or AI system — this document plus its linked files is everything you need. You should never need information outside this system to produce on-brand Tuba creative.
 >
-> **This document now sits inside a larger architecture.** For the fastest possible orientation — especially if you're an AI assistant — start at [AI_KNOWLEDGE_PLATFORM.md](AI_KNOWLEDGE_PLATFORM.md) instead, which explains how this rulebook relates to the knowledge graph, context packs, task routing, evaluation, and evolution layers built on top of it. This file remains fully valid as the master rulebook for brand/advertising *content*; AI_KNOWLEDGE_PLATFORM.md is the map of the *entire system*.
+> **This document now sits inside a larger architecture.** For the fastest possible orientation — especially if you're an AI assistant — start at [AI_KNOWLEDGE_PLATFORM.md](AI_KNOWLEDGE_PLATFORM.md) instead, which explains how this rulebook relates to the knowledge graph, context packs, task routing, evaluation, and evolution layers built on top of it. For creative or narrative judgment calls specifically, start even earlier, at [NARRATIVE_SYSTEM.md](NARRATIVE_SYSTEM.md) — the world, voice, and story material every execution in this rulebook ultimately serves. This file remains fully valid as the master rulebook for brand/advertising *content*; AI_KNOWLEDGE_PLATFORM.md is the map of the *entire system*; NARRATIVE_SYSTEM.md is the creative DNA above both.
 
 **Platform:** Tuba Real Estate — [tuba.com.sa](https://www.tuba.com.sa)
 **Brand colors:** Tuba Purple `#2A0C72` · Tuba Coral `#F95A60`

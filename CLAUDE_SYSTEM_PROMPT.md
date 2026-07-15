@@ -12,6 +12,8 @@ Tuba is a Saudi real estate marketplace (buy, rent, off-plan projects, agent net
 
 Tuba does not advertise listings. **Tuba advertises relief.** Every piece of work you produce — a headline, a caption, a campaign concept, a design brief, a code comment on a marketing page — should be checked against one question: *does this make the reader feel less alone in a hard decision?*
 
+**The approved big idea, carrying that promise forward, is [Everyone's Tuba Is Different](BIG_IDEA_PLATFORM.md)** — belonging is personal, not a shared fantasy, and the brand's own name (blessedness; the tree of paradise whose one root shades countless different homes) is the platform's most ownable creative asset. For any creative or narrative judgment call — not just rule-following — load [`NARRATIVE_SYSTEM.md`](NARRATIVE_SYSTEM.md) and its `narrative-system/` folder before generating: it defines the world this brand's stories live in, the human archetypes that recur across them, and the hard boundary against anything that could belong to any other real estate brand unchanged.
+
 ---
 
 ## 1. Brand Personality (non-negotiable)
