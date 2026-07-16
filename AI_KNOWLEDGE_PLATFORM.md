@@ -6,11 +6,13 @@
 
 ## 0. What This Platform Is
 
-Tuba's brand and advertising knowledge has grown from a single logo guideline PDF into a fully layered, AI-native knowledge platform spanning thirteen top-level folders and over 130 documents. It exists because a single brand-guide document cannot simultaneously serve a designer who needs a hex code in five seconds and an AI system that needs full campaign reasoning for a novel task — so instead of one document, this platform is a **system of systems**, each layer built to be loaded only when actually needed.
+Tuba's brand and advertising knowledge has grown from a single logo guideline PDF into a fully layered, AI-native knowledge platform spanning fourteen top-level folders and over 160 documents. It exists because a single brand-guide document cannot simultaneously serve a designer who needs a hex code in five seconds and an AI system that needs full campaign reasoning for a novel task — so instead of one document, this platform is a **system of systems**, each layer built to be loaded only when actually needed.
 
 This platform's validation layer — [`creative-factory/`](creative-factory/) plus [`CREATIVE_FACTORY_REPORT.md`](CREATIVE_FACTORY_REPORT.md) — is where that claim was actually tested: 8 full production-ready campaigns, built by reading only what each task required, scored honestly against the evaluation scorecards below (one landed in REVISE, on purpose, not smoothed over). Read the report before assuming any part of this platform works in practice rather than in theory.
 
-If you read only one section of this document, read §7 (Retrieval Strategy) and then go straight to [knowledge-graph/AI_INDEX.md](knowledge-graph/AI_INDEX.md). If the task is creative rather than executional, go to [`NARRATIVE_SYSTEM.md`](NARRATIVE_SYSTEM.md) instead — it sits one level above this document, the way a film's story bible sits above its shot-by-shot production guide.
+Communication is only half the platform. [`brand-behavior/`](brand-behavior/) plus [`BRAND_BEHAVIOR_SYSTEM.md`](BRAND_BEHAVIOR_SYSTEM.md) is the other half — the layer specifying not what Tuba says, but what Tuba *does*: product, service, AI, and human behavior at every real customer touchpoint. If the task is designing or reviewing a feature, an AI response, an email, a notification, or any UX flow — not writing an ad — start there instead.
+
+If you read only one section of this document, read §7 (Retrieval Strategy) and then go straight to [knowledge-graph/AI_INDEX.md](knowledge-graph/AI_INDEX.md). If the task is creative rather than executional, go to [`NARRATIVE_SYSTEM.md`](NARRATIVE_SYSTEM.md) instead — it sits one level above this document, the way a film's story bible sits above its shot-by-shot production guide. If the task is behavioral rather than communicative, go to [`BRAND_BEHAVIOR_SYSTEM.md`](BRAND_BEHAVIOR_SYSTEM.md) instead.
 
 ---
 
@@ -46,20 +48,23 @@ flowchart TD
     AS --> CF[creative-factory/<br/>validation]
     NS[narrative-system/] -.sits above.-> KB
     NS -.sits above.-> AS
+    BB[brand-behavior/<br/>product/service/AI behavior] -.sits above.-> AS
+    NS -.grounds.-> BB
 ```
 
-Six conceptual layers, thirteen folders:
+Seven conceptual layers, fourteen folders:
 
 | Layer | Folders | Answers |
 |---|---|---|
 | **Narrative** | `narrative-system/` | How Tuba thinks, feels, sees, and tells stories — sits above everything else |
+| **Behavior** | `brand-behavior/` | How Tuba behaves — product, service, AI, and human — everywhere communication alone doesn't reach |
 | **Foundation** | `knowledge-base/` | Why Tuba is what it is |
 | **Execution** | `advertising-system/` | How to produce on-brand advertising, day to day |
 | **Depth** | `brand-intelligence/`, `brand-memory/` | What Tuba deeply knows (static) and has actually learned (living) |
 | **Meta** | `knowledge-graph/`, `context-packs/`, `routing/`, `metadata/`, `evaluation/`, `brand-evolution/` | How to find, compress, route, tag, score, and evolve everything above |
 | **Validation** | `creative-factory/` | Proof the rest of this platform actually produces real creative work — not a documentation layer, a production one |
 
-Plus five root documents: this file, [NARRATIVE_SYSTEM.md](NARRATIVE_SYSTEM.md) (the highest-level creative document, discovered via [BIG_IDEA_PLATFORM.md](BIG_IDEA_PLATFORM.md)), [ADVERTISING_IDENTITY_GUIDE.md](ADVERTISING_IDENTITY_GUIDE.md) (the master rulebook), [CLAUDE_SYSTEM_PROMPT.md](CLAUDE_SYSTEM_PROMPT.md) (the compressed behavioral contract), and [CREATIVE_FACTORY_REPORT.md](CREATIVE_FACTORY_REPORT.md) (the validation report — 8 campaigns, scored honestly, system weaknesses named plainly).
+Plus six root documents: this file, [NARRATIVE_SYSTEM.md](NARRATIVE_SYSTEM.md) (the highest-level creative document, discovered via [BIG_IDEA_PLATFORM.md](BIG_IDEA_PLATFORM.md)), [BRAND_BEHAVIOR_SYSTEM.md](BRAND_BEHAVIOR_SYSTEM.md) (the highest-level behavioral document — what Tuba does, not what it says), [ADVERTISING_IDENTITY_GUIDE.md](ADVERTISING_IDENTITY_GUIDE.md) (the master rulebook), [CLAUDE_SYSTEM_PROMPT.md](CLAUDE_SYSTEM_PROMPT.md) (the compressed behavioral contract), and [CREATIVE_FACTORY_REPORT.md](CREATIVE_FACTORY_REPORT.md) (the validation report — 8 campaigns, scored honestly, system weaknesses named plainly).
 
 ## 2. Folder Hierarchy (complete)
 
@@ -67,12 +72,15 @@ Plus five root documents: this file, [NARRATIVE_SYSTEM.md](NARRATIVE_SYSTEM.md) 
 /
 ├── NARRATIVE_SYSTEM.md             ← the highest-level creative document — start here for anything creative
 ├── BIG_IDEA_PLATFORM.md            ← the approved big idea this document expands
+├── BRAND_PLATFORM_TRIBUNAL.md      ← the re-adjudication that confirmed the platform for the long term
+├── BRAND_BEHAVIOR_SYSTEM.md        ← the highest-level behavioral document — start here for product/service/AI behavior
 ├── AI_KNOWLEDGE_PLATFORM.md        ← you are here
 ├── ADVERTISING_IDENTITY_GUIDE.md   ← master rulebook / original index
 ├── CLAUDE_SYSTEM_PROMPT.md         ← compressed AI behavioral contract
 ├── CREATIVE_FACTORY_REPORT.md      ← the validation report — 8 real campaigns, scored honestly
 │
 ├── narrative-system/                Narrative: manifesto, world-building, pillars, archetypes, story library, and 15 more
+├── brand-behavior/                  Behavior: 29 documents — AI, search, service, trust, errors, personas, scorecard
 ├── knowledge-base/                 Foundation: project, brand, competitor analysis
 ├── advertising-system/             Execution: strategy (DNA→campaigns) + operating (checklists→AI prompts)
 ├── brand-intelligence/             Depth (static): psychology, personas, language, creative libraries
@@ -193,6 +201,7 @@ That's it. Everything else — the full 100+ documents — exists to be consulte
 
 ## Cross-references
 - The original brand rulebook (still fully valid, now one layer inside this architecture): [ADVERTISING_IDENTITY_GUIDE.md](ADVERTISING_IDENTITY_GUIDE.md)
+- What Tuba does, not just what it says — product, service, and AI behavior: [BRAND_BEHAVIOR_SYSTEM.md](BRAND_BEHAVIOR_SYSTEM.md), [brand-behavior/](brand-behavior/README.md)
 - The compressed behavioral contract: [CLAUDE_SYSTEM_PROMPT.md](CLAUDE_SYSTEM_PROMPT.md)
 - The complete document-by-document index: [knowledge-graph/INDEX.md](knowledge-graph/INDEX.md)
 - How the whole system conceptually works: [knowledge-graph/ONTOLOGY.md](knowledge-graph/ONTOLOGY.md)
